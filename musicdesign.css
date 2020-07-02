@@ -904,6 +904,16 @@ input:focus, select:focus, textarea:focus, button:focus {
         margin: 0px !important;
         margin-left: 4px !important;
     }
+     
+    .play-icon{
+        top: 57% !important;
+    }
+
+    .option-icon{
+        top: 57% !important;
+        left: 77% !important;
+    }
+
     
     .eng-song{
          max-width: 155px !important;
