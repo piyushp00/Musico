@@ -1,0 +1,2478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" type="text/css" href="musicdesign.css">
+    <link rel="stylesheet" type="text/css" href="button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/uqa7roz.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+    <!--CSS Spinner-->
+    <div id="overlay">
+        <div class="spinner-wrapper">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+
+
+    <nav id="side-bar" class="side-nav">
+        <div id="nav-icon" class="hamburger animate__animated animate__fadeInLeft">
+            <span class="bar"></span>
+        </div>
+        <ul class="side-nav-list">
+
+            <li class="side-nav-item">
+                <div class="side-bar-search">
+                    <span class="search-icon"><i class="fas fa-search color-grey"></i></span>
+                    <input type="text" class="search-form" placeholder="Search Music">
+                    <span class="mic-icon">
+                        <i class="fas fa-microphone color-grey"></i>
+
+                    </span>
+                </div>
+            </li>
+            <li class="side-nav-item margin-side-nav">
+                <a class="side-nav-link" href=""><i class="fas fa-home"></i> Home</a>
+            </li>
+
+            <li class="side-nav-item margin-side-nav">
+                <a class="side-nav-link" href=""><i class="fas fa-music"></i> Playlists</a>
+            </li>
+
+            <li class="side-nav-item margin-side-nav">
+                <a class="side-nav-link" href=""><i class="fas fa-heart"></i> Favourites</a>
+            </li>
+
+            <li class="side-nav-item margin-side-nav">
+                <a class="side-nav-link" href=""><i class="fas fa-user-circle"></i> My Account</a>
+            </li>
+
+            <li class="side-nav-item margin-side-nav">
+                <a class="side-nav-link" href=""><i class="fas fa-bell"></i> Notifications</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <header>
+
+
+
+
+
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <div id="logo">
+                    <a href="Music Player.html"><img src="images/logo.png"></a>
+                    <!-- <span class="logo-name"></span> -->
+                </div>
+                <span class="fav-top-bar">Favourites<i class="fas fa-heart"></i></span>
+            </div>
+
+            <div class="top-bar-right">
+                <div class="top-bar-search">
+                    <span class="search-icon"><i class="fas fa-search color-grey"></i></span>
+                    <input type="text" class="search-form" placeholder="Search Music Here..">
+                    <span class="mic-icon">
+                        <i class="fas fa-microphone color-grey"></i>
+                        <i class="fas fa-circle"></i>
+                    </span>
+                </div>
+                <span class="notification-bell"><i class="fas fa-bell"></i></span>
+                <div class="user-icon">
+                    <a href=""><img src="images/user.jpg"></a>
+                </div>
+                <!-- <div id="header-btn">
+                    <button type="button" class="top-btn">Login</button>
+                     <button type="button" class="top-btn">Signup</button>
+                </div> -->
+
+
+            </div>
+        </div>
+
+        <!-- <nav id="queue-side-bar" class="queue-side-nav">
+                <div id="nav-icon" class="hamburger">
+                    <span class="bar"></span>
+                </div>
+                <ul class="side-nav-list">
+                    <li class="side-nav-item">
+                        <a class="side-nav-link" href="">Home</a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a class="side-nav-link" href="">About</a>
+                    </li>
+                    <li class="side-nav-item">
+                        <a class="side-nav-link" href="">Contanct</a>
+                    </li>
+                </ul>
+            </nav> -->
+
+
+        <nav id="queue-side-bar" class="queue-side-nav">
+            <div id="queue-nav-icon" class="queuehamburger animate__animated animate__fadeInRight">
+                <span class="queue-bar">
+                    <i class="material-icons md-36">queue_music</i>
+                </span>
+            </div>
+            <div class="queue-side-nav-list">
+                <div class="queue-list">
+                    <div class="sec-heading">
+                        <h3>Queue</h3>
+                        <span>View All</span>
+                    </div>
+
+                    <div id="recent-song-list" class="aside-list-wrapper">
+
+                        <div class="recent-list  ">
+                            <ul>
+                                <li class="count"><span class="rank">01</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/twotone_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img src="album/xxxxxxx.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Whoa!</a>
+                                    <p>XXXTentacion</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">02</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/twotone_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img src="album/500x500bb.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Changes</a>
+                                    <p>Justin Beiber</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">03</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img src="album/taylor-swift-LOVER.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Lover</a>
+                                    <p>Taylor Swift</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">04</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img
+                                            src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                                </li>
+                                <li class="recent-sng-name"><a href="">Havana</a>
+                                    <p>Camila Cabello</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">05</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img
+                                            src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Young Thug</a>
+                                    <p>Lil Wayne</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">06</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img
+                                            src="album/paul-kelly-nature-album-art-2018-billboard-embed-compressed.jpg"></a>
+                                </li>
+                                <li class="recent-sng-name"><a href="">Nurture</a>
+                                    <p>Paul Kelly</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">07</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img src="album/500x500bb.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Changes</a>
+                                    <p>Justin Beiber</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">08</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img src="album/taylor-swift-LOVER.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Lover</a>
+                                    <p>Taylor Swift</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">09</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img
+                                            src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                                </li>
+                                <li class="recent-sng-name"><a href="">Havana</a>
+                                    <p>Camila Cabello</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">10</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img
+                                            src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Young Thug</a>
+                                    <p>Lil Wayne</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">11</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img src="album/xxxxxxx.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Whoa!</a>
+                                    <p>XXXTentacion</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">12</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img src="album/500x500bb.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Changes</a>
+                                    <p>Justin Beiber</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">13</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img src="album/taylor-swift-LOVER.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Lover</a>
+                                    <p>Taylor Swift</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">14</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img
+                                            src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                                </li>
+                                <li class="recent-sng-name"><a href="">Havana</a>
+                                    <p>Camila Cabello</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">15</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img
+                                            src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Young Thug</a>
+                                    <p>Lil Wayne</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">16</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img src="album/xxxxxxx.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Whoa!</a>
+                                    <p>XXXTentacion</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">17</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img src="album/500x500bb.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Changes</a>
+                                    <p>Justin Beiber</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">18</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img src="album/taylor-swift-LOVER.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Lover</a>
+                                    <p>Taylor Swift</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">19</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img
+                                            src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                                </li>
+                                <li class="recent-sng-name"><a href="">Havana</a>
+                                    <p>Camila Cabello</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list">
+                            <ul>
+                                <li class="count"><span class="rank">20</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img
+                                            src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="">Young Thug</a>
+                                    <p>Lil Wayne</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+
+
+
+
+    <!-- <div class="cover">
+
+
+        <div class="cover-info">
+            <h1>Touching Heaven<br>on Frequency</h1>
+            <p>Dream your moments, Until I Met You, Gimme Some Courage, Dark Alley, <br>One More Of A Stranger, Endless
+                Things, The Heartbeat Stops,<br> Walking Promises, Desired Games and many more...</p>
+            <div id="new-button">
+                <a class="white" href="#">
+                    <p>
+                        <span class="bg"></span>
+                        <span class="base"></span>
+                        <span class="text">Listen Now</span>
+                    </p>
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="cover-image">
+            <img src="album/banner.png">
+        </div>
+
+    </div>  -->
+
+
+
+
+    <main id="main-section">
+
+
+        <section id="carsl" class="section">
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true"
+                        hidden="" checked="checked">
+                    <div class="carousel-item">
+                        <a href=""><img src="album/brannon-naito-RER6g2wvEyw-unsplashfff Cropped.jpg"></a>
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true"
+                        hidden="">
+                    <div class="carousel-item">
+                        <a href=""><img src="album/t.jpg"></a>
+
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true"
+                        hidden="">
+                    <div class="carousel-item">
+                        <a href=""><img src="album/m.jpg"></a>
+
+                    </div>
+                    <label for="carousel-3" class="carousel-control prev control-1">‹</label>
+                    <label for="carousel-2" class="carousel-control next control-1">›</label>
+                    <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                    <label for="carousel-3" class="carousel-control next control-2">›</label>
+                    <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+                    <label for="carousel-1" class="carousel-control next control-3">›</label>
+                    <ol class="carousel-indicators">
+                        <li>
+                            <label for="carousel-1" class="carousel-bullet">•</label>
+                        </li>
+                        <li>
+                            <label for="carousel-2" class="carousel-bullet">•</label>
+                        </li>
+                        <li>
+                            <label for="carousel-3" class="carousel-bullet">•</label>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="latest-release-section" class="section">
+            <div class="section-heading">
+                <h3>Latest Releases</h3>
+            </div>
+            <div class="latest-release-container">
+                <div class="album-container">
+
+                    <div class="album-art">
+
+                        <img class="" src="album/500x500bb.jpg">
+                        <div class="play-icon">
+                            <a href="#music-cnt"><i class="fas fa-play"></i></a>
+                        </div>
+
+                        
+
+                        <!-- <div class="option-icon">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>   -->
+
+                    </div>
+
+
+                    <div class="song-info">
+                        <h4><a href="#">Changes</a></h4>
+                        <p>Justin Bieber</p>
+                    </div>
+
+                    <div id="dropdown-menu" class="dropdown-menu">
+
+                        <div class="option-icon">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+
+                        <!-- <div class="list-cross"><a href="#/"><i class="fas fa-angle-down"></i></a></div> -->
+                        <div id="dropdown-list" class="dropdown-list">
+
+                            <ul class="more-option open-option no-list-style">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add
+                                        To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To
+                                        Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download
+                                        Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To
+                                        Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="album-container">
+
+                    <div class="album-art">
+                        <img class="" src="album/8257cc1abae86133306a4860aa949a51.jpg">
+                        <div class="play-icon">
+
+                            <a href="#music-cnt"><i class="fas fa-play"></i></a>
+                        </div>
+
+
+                    </div>
+                    <div class="song-info">
+                        <h4><a href="#">New Rules</a></h4>
+                        <p>Dua Lipa</p>
+                    </div>
+
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <div class="option-icon">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div id="dropdown-list" class="dropdown-list">
+
+                            <ul class="more-option open-option no-list-style">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add
+                                        To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To
+                                        Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download
+                                        Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To
+                                        Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="album-container">
+                    <div class="album-art">
+                        <a><img class="" src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                        <div class="play-icon">
+
+                            <a href="#music-cnt"><i class="fas fa-play"></i></a>
+                        </div>
+
+
+                    </div>
+                    <div class="song-info">
+                        <h4><a href="#">Havana</a></h4>
+                        <p>Camila Cabello</p>
+                    </div>
+
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <div class="option-icon">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div id="dropdown-list" class="dropdown-list">
+
+                            <ul class="more-option open-option no-list-style">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add
+                                        To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To
+                                        Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download
+                                        Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To
+                                        Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="album-container">
+
+                    <div class="album-art">
+                        <img class="" src="album/taylor-swift-LOVER.jpg">
+                        <div class="play-icon">
+
+                            <a href="#music-cnt"><i class="fas fa-play"></i></a>
+                        </div>
+
+
+                    </div>
+                    <div class="song-info">
+                        <h4><a href="#">Lover</a></h4>
+                        <p>Taylor Swift</p>
+                    </div>
+
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <div class="option-icon">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </div>
+                        <div id="dropdown-list" class="dropdown-list">
+
+                            <ul class="more-option open-option no-list-style">
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_fav"></span></span>Add
+                                        To
+                                        Favourites</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_queue"></span></span>Add
+                                        To
+                                        Queue</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_dwn"></span></span>Download
+                                        Now</a></li>
+                                <li><a href="#"><span class="opt_icon"><span class="icon icon_playlst"></span></span>Add
+                                        To
+                                        Playlist</a></li>
+                                <li><a href="#"><span class="opt_icon"><span
+                                                class="icon icon_share"></span></span>Share</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <div class="section-heading">
+                <h3>Popular Artists</h3>
+            </div>
+
+            <div class="artist-container">
+
+                <div class="artist">
+
+                    <div class="artist-img">
+                        <a href="taylor-swift.html"><img class="ar-img" src="album/taylor.jpg"></a>
+                    </div>
+
+                    <div class="artist-info">
+                        <a href="taylor-swift.html">Taylor Swift</a>
+                    </div>
+
+                    <div class="ar-play">
+                        <a href="taylor-swift.html"><img src="album/twotone_play_arrow_white_36dp.png"></a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="artist">
+                    <div class="artist-img">
+                        <a href="juice-wrld.html"><img class="backgroundd" src="album/juice.jpg"></a>
+                    </div>
+
+                    <div class="artist-info">
+                        <a href="juice-wrld.html">Juice Wrld</a>
+                    </div>
+
+                    <div class="ar-play">
+                        <a href="juice-wrld.html"><img src="album/twotone_play_arrow_white_36dp.png"></a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="artist">
+                    <div class="artist-img">
+                        <a href="harry-styles.html"><img src="album/harrrrrrrrrrrrrrrr.jpg"></a>
+                    </div>
+
+                    <div class="artist-info">
+                        <a href="harry-styles.html">Harry Styles</a>
+                    </div>
+
+                    <div class="ar-play">
+                        <a href="harry-styles.html"><img src="album/twotone_play_arrow_white_36dp.png"></a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="artist">
+                    <div class="artist-img">
+                        <a href="xxxtentacion.html"><img src="album/xxxxxxx.jpg"></a>
+                    </div>
+
+                    <div class="artist-info">
+                        <a href="xxxtentacion.html">XXXTentacion</a>
+                    </div>
+
+                    <div class="ar-play">
+                        <a href="xxxtentacion.html"><img src="album/twotone_play_arrow_white_36dp.png"></a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="artist">
+                    <div class="artist-img">
+                        <a href="dua-lipa.html"><img src="album/dua.jpg"></a>
+                    </div>
+
+                    <div class="artist-info">
+                        <a href="dua-lipa.html">Dua Lipa</a>
+                    </div>
+
+                    <div class="ar-play">
+                        <a href="dua-lipa.html"><img src="album/twotone_play_arrow_white_36dp.png"></a>
+                    </div>
+                </div>
+
+                <div class="artist">
+
+                    <div class="artist-img">
+                        <a href="camila-cabello.html"><img class="ar-img" src="album/cam1.jpg"></a>
+                    </div>
+
+                    <div class="artist-info">
+                        <a href="camila-cabello.html">Camila Cabello</a>
+                    </div>
+
+                    <div class="ar-play">
+                        <a href="camila-cabello.html"><img src="album/twotone_play_arrow_white_36dp.png"></a>
+                    </div>
+                </div>
+
+                <div class="artist">
+                    <div class="artist-img">
+                        <a href="zayn-malik.html"><img src="album/zaynnn.jpg"></a>
+                    </div>
+
+                    <div class="artist-info">
+                        <a href="zayn-malik.html">Zayn Malik</a>
+                    </div>
+
+                    <div class="ar-play">
+                        <a href="zayn-malik.html"><img src="album/twotone_play_arrow_white_36dp.png"></a>
+                    </div>
+                </div>
+
+                <div class="artist">
+                    <div class="artist-img">
+                        <a href="justin-bieber.html"><img src="album/jb.jpg"></a>
+                    </div>
+
+                    <div class="artist-info">
+                        <a href="justin-bieber.html">Justin Bieber</a>
+                    </div>
+
+                    <div class="ar-play">
+                        <a href="justin-bieber.html"><img src="album/twotone_play_arrow_white_36dp.png"></a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="artist">
+                    <div class="artist-img">
+                        <a href="shawn-mendes.html"><img src="album/shawn.jpg"></a>
+                    </div>
+
+                    <div class="artist-info">
+                        <a href="shawn-mendes.html">Shawn Mendes</a>
+                    </div>
+
+                    <div class="ar-play">
+                        <a href="shawn-mendes.html"><img src="album/twotone_play_arrow_white_36dp.png"></a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="artist">
+                    <div class="artist-img">
+                        <a href="imagine-dragons.html"><img src="album/drg.jpg"></a>
+                    </div>
+
+                    <div class="artist-info">
+                        <a href="imagine-dragons.html">Imagine Dragons</a>
+                    </div>
+
+                    <div class="ar-play">
+                        <a href=""><img src="album/twotone_play_arrow_white_36dp.png"></a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <section id="stn" class="section">
+            <div class="section-heading" style="margin-left: 10px;">
+                <h3>Popular Stations</h3>
+            </div>
+
+            <div class="stn-container">
+                <!-- <div class="stn-logo">
+                    <img src="images/vinyl-music-audio-musical-512.png">
+                </div> -->
+
+
+                <div class="stn-info" ">
+                    <div class=" stn-img">
+                    <img src="album/happy.jpg">
+                </div>
+                <a href="">Happy</a>
+            </div>
+
+
+            <div class="stn-info">
+                <div class="stn-img">
+                    <img src="album/sq lv.jpg">
+
+                </div>
+                <a href="">Love</a>
+            </div>
+
+            <div class="stn-info">
+                <div class="stn-img">
+                    <img src="album/re.jpg">
+                </div>
+                <a href="">Retro</a>
+            </div>
+
+
+            <div class="stn-info">
+                <div class="stn-img">
+                    <img src="album/jorge-saavedra-94qZsII4kN8.jpg">
+                </div>
+                <a href="">Happy</a>
+            </div>
+
+            <div class="stn-info">
+                <div class="stn-img">
+                    <img src="album/song3.jpg">
+
+                </div>
+                <a href="">Happy</a>
+            </div>
+
+            <div class="stn-info">
+                <div class="stn-img">
+                    <img src="album/happy.jpg">
+                </div>
+                <a href="">Happy</a>
+            </div>
+
+            <!-- <div class="stn-img">
+                        <img src="album/wrkout.jpg">
+                    </div> -->
+
+            </div>
+
+        </section>
+
+
+
+
+        <section id="genre">
+
+            <div class="section-heading">
+                <h3>Top Genres</h3>
+            </div>
+            <div class="genre-container">
+                <div class="rom-ctn ctn">
+                    <div class="rom-img hov-img">
+                        <a href="https://www.google.com/"><img src="album/ffffff.jpg"></a>
+                    </div>
+
+                    <div id="rom-name" class="genre-name">
+                        <a href="">Romance</a>
+                    </div>
+
+                </div>
+
+                <div class="mid-genre">
+                    <div class="mid-genre-container">
+
+                        <div class="retro-ctn ctn">
+                            <div class="retro-img hov-img">
+                                <img src="album/classical.jpg">
+                            </div>
+
+                            <div id="retro-name" class="genre-name">
+                                <a href="">Classical</a>
+                            </div>
+                        </div>
+
+
+                        <div class="hop-ctn ctn">
+                            <div class="hop-img hov-img">
+                                <img src="album/rrr.jpg">
+                            </div>
+
+                            <div id="hop-name" class="genre-name">
+                                <a href="">Hip-Hop</a>
+                            </div>
+                        </div>
+
+
+                        <div class="dance-ctn ctn">
+                            <div class="dance-img hov-img">
+                                <img src="album/photo-1506157786151-b8491531f063.jpg">
+                            </div>
+
+                            <div id="dance-name" class="genre-name">
+                                <a href="">Dance</a>
+                            </div>
+                        </div>
+
+
+                        <div class="edm-ctn ctn">
+                            <div class="edm-img hov-img">
+                                <img src="album/edm.jpg">
+                            </div>
+
+                            <div id="edm-name" class="genre-name">
+                                <a href="">EDM</a>
+                            </div>
+                        </div>
+
+                        <div class="rock-ctn ctn">
+                            <div class="rock-img hov-img">
+                                <img src="album/ddddd.jpg">
+                            </div>
+
+                            <div id="rock-name" class="genre-name">
+                                <a href="">Rock</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="bottom-genre">
+                    <div class="bottom-genre-container">
+                        <div class="pride-ctn ctn">
+                            <div class="pride-img hov-img">
+                                <img src="album/photo-1460723237483-7a6dc9d0b212.jpg">
+                            </div>
+
+                            <div id="pride-name" class="genre-name">
+                                <a href="">Pride</a>
+                            </div>
+                        </div>
+                        <div class="elec-ctn ctn">
+                            <div class="elec-img hov-img">
+                                <img src="album/elec.jpg">
+                            </div>
+
+                            <div id="elec-name" class="genre-name">
+                                <a href="">Electronic</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section class="section genre-breakpoint-option">
+
+            <div class="section-heading">
+                <h3>Top Genere</h3>
+            </div>
+
+            <div class="latest-eng-container">
+
+                <div class="genre-br-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/k.jpg"></a>
+                    </div>
+                    <div class="gen-nm">
+                        <div class="gen-nm-info">
+                            <p><a href="#music-cnt">Romance</a></p>
+                            <!-- <p class="ar">Justin Bieber</p> -->
+                        </div>
+                        <!-- <div class="time">4:15</div> -->
+                    </div>
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="genre-br-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/d.jpg"></a>
+                    </div>
+
+                    <div class="gen-nm">
+                        <div class="gen-nm-info">
+                            <p><a href="">Retro</a></p>
+                            <!-- <p class="ar">Justin Bieber</p> -->
+                        </div>
+                        <!-- <div class="time">4:15</div> -->
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="genre-br-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/h.jpg"></a>
+                    </div>
+
+                    <div class="gen-nm">
+                        <div class="gen-nm-info">
+                            <p><a href="">Hip-Hop</a></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+
+                <!-- <div class="eng-song">
+                    <div class="song-img">
+                        <a href=""><img
+                            src="</a>album/680x382sr-60 (4).jpg">
+                    </div>
+
+                    <div class="gen-nm">
+                        <div class="gen-nm-info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div> -->
+
+                <div class="genre-br-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/j.jpg"></a>
+                    </div>
+
+                    <div class="gen-nm">
+                        <div class="gen-nm-info">
+                            <p><a href="">Dance</a></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+                <div class="genre-br-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/b.jpg"></a>
+                    </div>
+                    <div class="gen-nm">
+                        <div class="gen-nm-info">
+                            <p><a href="">EDM</a></p>
+
+                        </div>
+
+                    </div>
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="genre-br-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/i.jpg"></a>
+                    </div>
+
+                    <div class="gen-nm">
+                        <div class="gen-nm-info">
+                            <p><a href="">Rock</a></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="genre-br-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/a.jpg"></a>
+                    </div>
+
+                    <div class="gen-nm">
+                        <div class="gen-nm-info">
+                            <p><a href="">Pride</a></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="genre-br-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/m1.jpg"></a>
+                    </div>
+
+                    <div class="gen-nm">
+                        <div class="gen-nm-info">
+                            <p><a href="">Electronic</a></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+
+
+
+        <section class="section song-section">
+
+            <div class="section-heading">
+                <h3>Music by Mood</h3>
+            </div>
+
+            <div class="latest-eng-container">
+
+                <div class="mood-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/680x382sr-60.jpg"></a>
+                    </div>
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Focus</a></p>
+                            <!-- <p class="ar">Justin Bieber</p> -->
+                        </div>
+                        <!-- <div class="time">4:15</div> -->
+                    </div>
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="mood-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/680x382sr-60 (2).jpg"></a>
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="">Throwback</a></p>
+                            <!-- <p class="ar">Justin Bieber</p> -->
+                        </div>
+                        <!-- <div class="time">4:15</div> -->
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="mood-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/680x382sr-60 (3).jpg"></a>
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="">Party</a></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+
+                <!-- <div class="eng-song">
+                    <div class="song-img">
+                        <a href=""><img
+                            src="</a>album/680x382sr-60 (4).jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div> -->
+
+                <div class="mood-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/680x382sr-60 (1).jpg"></a>
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="">Blues</a></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+                <div class="mood-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/680x382sr-60 (4).jpg"></a>
+                    </div>
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="">Chill</a></p>
+
+                        </div>
+
+                    </div>
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="mood-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/680x382sr-60 (5).jpg"></a>
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="">Feel Good</a></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+
+                <div class="mood-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/680x382sr-60 (6).jpg"></a>
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="">Fitness</a></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="mood-song">
+                    <div class="song-img">
+                        <a href=""><img src="album/680x382sr-60 (7).jpg"></a>
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="">Motivation</a></p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </section>
+
+
+
+        <section class="section song-section">
+
+            <div class="section-heading">
+                <h3>Latest English</h3>
+            </div>
+
+            <div class="latest-eng-container">
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/500x500bb.jpg">
+                    </div>
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Changes</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/round_play_arrow_white_36dp (2).png"></a>
+                    </div>
+                </div>
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/3af0e55ea66ea69e35145fb108b4a636.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Starboy</a></p>
+                            <p class="ar">The Weekend</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/3dfe960dac5aaa62b9b91df9c3ef22fb.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Attention</a></p>
+                            <p class="ar">Charlie Puth</p>
+                        </div>
+                        <div class="time">3:48</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <!-- <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/paul-kelly-nature-album-art-2018-billboard-embed-compressed.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+
+
+        <section class="section song-section">
+
+            <div class="section-heading">
+                <h3>Latest English</h3>
+            </div>
+
+            <div class="latest-eng-container">
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/500x500bb.jpg">
+                    </div>
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/be263e27a411e54ae5cd86d95ed5d69b.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/kids-see-ghosts-album-art-2018-billboard-1240-1024x1024.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <!-- <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/paul-kelly-nature-album-art-2018-billboard-embed-compressed.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+
+
+        <section class="section song-section">
+
+            <div class="section-heading">
+                <h3>Latest English</h3>
+            </div>
+
+            <div class="latest-eng-container">
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/500x500bb.jpg">
+                    </div>
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/migos-culture-2-album-art-2018-billboard-1240-compressed.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/kids-see-ghosts-album-art-2018-billboard-1240-1024x1024.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div>
+
+                <!-- <div class="eng-song">
+                    <div class="song-img">
+                        <img src="album/paul-kelly-nature-album-art-2018-billboard-embed-compressed.jpg">
+                    </div>
+
+                    <div class="song-details">
+                        <div class="info">
+                            <p><a href="#music-cnt">Sorry</a></p>
+                            <p class="ar">Justin Bieber</p>
+                        </div>
+                        <div class="time">4:15</div>
+                    </div>
+
+                    <div class="song-play">
+                        <a href="#music-cnt"><img src="album/play-button.svg"></a>
+                    </div>
+                </div> -->
+
+            </div>
+        </section>
+
+        <!-- apple-color -->
+        <!-- .product-lockup__artwork-for-radiosity-effect {
+                opacity: .3;
+            }
+            
+            .product-lockup__artwork-for-radiosity-effect {
+                position: absolute;
+                transform: scale(.92) translateY(calc(4% + 14px)) translateZ(0);
+                -webkit-filter: blur(30px) brightness(130%);
+                filter: blur(30px) brightness(130%);
+                opacity: .55;
+                width: 100%;
+                height: 100%;
+                z-index: 1001; -->
+
+
+        <aside id="aside-section" class="aside-section">
+
+            <div class="queue-list">
+                <div class="sec-heading">
+                    <h3>Queue</h3>
+                    <span>View All</span>
+                </div>
+
+                <div id="recent-song-list" class="aside-list-wrapper">
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">01</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/twotone_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/xxxxxxx.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Whoa!</a>
+                                <p>XXXTentacion</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">02</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/twotone_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/500x500bb.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Changes</a>
+                                <p>Justin Beiber</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">03</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/taylor-swift-LOVER.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Lover</a>
+                                <p>Taylor Swift</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">04</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                            </li>
+                            <li class="recent-sng-name"><a href="">Havana</a>
+                                <p>Camila Cabello</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">05</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img
+                                        src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Young Thug</a>
+                                <p>Lil Wayne</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">06</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img
+                                        src="album/paul-kelly-nature-album-art-2018-billboard-embed-compressed.jpg"></a>
+                            </li>
+                            <li class="recent-sng-name"><a href="">Nurture</a>
+                                <p>Paul Kelly</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">07</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/500x500bb.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Changes</a>
+                                <p>Justin Beiber</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">08</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/taylor-swift-LOVER.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Lover</a>
+                                <p>Taylor Swift</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">09</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                            </li>
+                            <li class="recent-sng-name"><a href="">Havana</a>
+                                <p>Camila Cabello</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">10</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img
+                                        src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Young Thug</a>
+                                <p>Lil Wayne</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">11</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/xxxxxxx.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Whoa!</a>
+                                <p>XXXTentacion</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">12</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/500x500bb.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Changes</a>
+                                <p>Justin Beiber</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">13</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/taylor-swift-LOVER.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Lover</a>
+                                <p>Taylor Swift</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">14</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                            </li>
+                            <li class="recent-sng-name"><a href="">Havana</a>
+                                <p>Camila Cabello</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">15</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img
+                                        src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Young Thug</a>
+                                <p>Lil Wayne</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">16</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/xxxxxxx.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Whoa!</a>
+                                <p>XXXTentacion</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">17</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/500x500bb.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Changes</a>
+                                <p>Justin Beiber</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">18</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/taylor-swift-LOVER.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Lover</a>
+                                <p>Taylor Swift</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">19</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                            </li>
+                            <li class="recent-sng-name"><a href="">Havana</a>
+                                <p>Camila Cabello</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list">
+                        <ul>
+                            <li class="count"><span class="rank">20</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img
+                                        src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="">Young Thug</a>
+                                <p>Lil Wayne</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="queue-list">
+                <div class="section-heading">
+                    <h3>Queue</h3>
+                    <div>
+
+                    </div>
+                </div>
+                <div>
+                    <ul class="sticky queue">
+
+                        <li style="padding-top: 10px;">
+                            <span class="count">01 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">Worry Bout Us</a>
+                                <p>Rosie Lowe</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart"></i></button>
+                            <span class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li class="move-up">
+                            <span class="count">02 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">Worry Bout Us</a>
+                                <p>Rosie Lowe</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart"></i></button>
+                            <span class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">03 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">New Skin</a>
+                                <p>Flume</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button><span
+                                class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">04 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">Worry Bout Us</a>
+                                <p>Rosie Lowe</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button><span
+                                class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">05 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">Mirage</a>
+                                <p>Else</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button><span
+                                class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">06 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">Worry Bout Us</a>
+                                <p>Rosie Lowe</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button><span
+                                class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">07 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">New Skin</a>
+                                <p>Flume</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button><span
+                                class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">08 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">Worry Bout Us</a>
+                                <p>Rosie Lowe</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button><span
+                                class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">09 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">Mirage</a>
+                                <p>Else</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button><span
+                                class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">10 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">Worry Bout Us</a>
+                                <p>Rosie Lowe</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button><span
+                                class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">11 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">New Skin</a>
+                                <p>Flume</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button><span
+                                class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">12 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">Worry Bout Us</a>
+                                <p>Rosie Lowe</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button><span
+                                class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">13 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">Mirage</a>
+                                <p>Else</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button><span
+                                class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">14 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">Worry Bout Us</a>
+                                <p>Rosie Lowe</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button>
+                            <span class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">15 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">New Skin</a>
+                                <p>Flume</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button>
+                            <span class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">16 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">New Skin</a>
+                                <p>Flume</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button>
+                            <span class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">17 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">New Skin</a>
+                                <p>Flume</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button>
+                            <span class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">18 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">New Skin</a>
+                                <p>Flume</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button>
+                            <span class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">19 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">New Skin</a>
+                                <p>Flume</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button>
+                            <span class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+                        <li>
+                            <span class="count">20 </span>
+                            <span class="thumbnail"><img
+                                    src="album/mo-forever-neverland-album-art-2018-billboard-embed-1024x1024.jpg"></span>
+                            <div class="queue-song"><a href="">New Skin</a>
+                                <p>Flume</p>
+                            </div>
+                            <button type="button" class="heart"><i class="far fa-heart "></i></button>
+                            <span class="queue-play"><i class="far fa-play-circle"></i></span>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div> -->
+        </aside>
+
+
+
+
+    </main>
+
+
+    <footer id="music-cnt">
+        <div class="cross"><a href="#/"> X </a></div>
+        <div class="music-player-bar">
+            <div class="left-sec">
+                <ul class="list-cnt">
+                    <li class="thumb"><a href=""><img src="album/500x500bb.jpg"></a></li>
+                    <li class="song-nm"><a href="">Let me love you</a>
+                        <p>Justin Bieber</p>
+                    </li>
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-18">favorite_border</i></button></li>
+                    <li><button type=button class="ico-btn"><i class=" material-icons md-light md-18">block</i></button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="middle-sec">
+                <ul class="list-cnt">
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-18">shuffle</i></button></li>
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-24">skip_previous</i></button></li>
+
+                    <li class=""><button type=button class="ico-btn play-pause"><img
+                                src="album/twotone_play_arrow_white_36dp (2).png"></button></li>
+                    <!-- <li class=""><button type=button class="ico-btn play-pause"><i
+                                class="material-icons md-light md-48 ">pause_circle_outline</i></button></li> -->
+
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-24">skip_next</i></button></li>
+                    <li><button type=button class="ico-btn"><i class="material-icons md-light md-18">repeat</i></button>
+                    </li>
+                    <div class="seeker-cnt">
+                        <div class="seeker-out">
+                            <div class="seeker-in"></div>
+                        </div>
+
+                        <div class="seeker-knob">
+
+                        </div>
+                    </div>
+
+
+
+                </ul>
+
+            </div>
+
+            <ul class="right-sec">
+                <ul class="list-cnt">
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-24">playlist_play</i></button></li>
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-18">devices</i></button>
+                    </li>
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-18">volume_up</i></button>
+                    </li>
+
+                    <li>
+                        <div class="volm-cnt">
+                            <div class="volm-out">
+                                <div class="volm-in"></div>
+                            </div>
+
+                            <div class="volm-knob">
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="expand-btn"><button type=button class="ico-btn"><img
+                                src="album/01_maximize-expand-512.png"></button></li>
+                    <!-- <i class=" material-icons md-light md-18">open_in_full</i> -->
+                </ul>
+        </div>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        var overlay =
+            document.getElementById("overlay");
+
+        window.addEventListener('load', function () {
+            overlay.style.display = 'none';
+        })
+
+
+        var hamburger = document.getElementById("nav-icon");
+
+        hamburger.addEventListener("click", function () {
+            document.querySelector(".side-nav-list").classList.toggle("slide-in");
+            document.querySelector(".hamburger").classList.toggle("close");
+        });
+
+        var hamburger = document.getElementById("queue-nav-icon");
+
+        hamburger.addEventListener("click", function () {
+            document.querySelector(".queue-side-nav-list").classList.toggle("slide-in-right");
+            document.querySelector(".queuehamburger").classList.toggle("close");
+        });
+
+
+    </script>
+</body>
+
+</html>

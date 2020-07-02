@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <link rel="stylesheet" type="text/css" href="artist-style.css">
+    <link rel="stylesheet" type="text/css" href="button.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+        integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/uqa7roz.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body class="animate__animated animate__fadeInLeft">
+    <!--CSS Spinner-->
+    <div id="overlay">
+        <div class="spinner-wrapper">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Header -->
+
+
+    <nav id="side-bar" class="side-nav">
+        <div id="nav-icon" class="hamburger animate__animated animate__fadeInLeft">
+            <span class="bar"></span>
+        </div>
+        <ul class="side-nav-list">
+            <li class="side-nav-item">
+                <div class="side-bar-search">
+                    <span class="search-icon"><i class="fas fa-search color-grey"></i></span>
+                    <input type="text" class="search-form" placeholder="Search Music">
+                    <span class="mic-icon">
+                        <i class="fas fa-microphone color-grey"></i>
+
+                    </span>
+                </div>
+            </li>
+            <li class="side-nav-item margin-side-nav">
+                <a class="side-nav-link" href=""><i class="fas fa-home"></i> Home</a>
+            </li>
+
+            <li class="side-nav-item margin-side-nav">
+                <a class="side-nav-link" href=""><i class="fas fa-music"></i> Playlists</a>
+            </li>
+
+            <li class="side-nav-item margin-side-nav">
+                <a class="side-nav-link" href=""><i class="fas fa-heart"></i> Favourites</a>
+            </li>
+
+            <li class="side-nav-item margin-side-nav">
+                <a class="side-nav-link" href=""><i class="fas fa-user-circle"></i> My Account</a>
+            </li>
+
+            <li class="side-nav-item margin-side-nav">
+                <a class="side-nav-link" href=""><i class="fas fa-bell"></i> Notifications</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="top-bar">
+
+            <div class="top-bar-left">
+                <div id="logo">
+                    <a href="Music Player.html"><img src="images/logo.png"></a>
+                    <!-- <span class="logo-name">Harmony</span> -->
+                </div>
+                <span class="fav-top-bar">Favourites<i class="fas fa-heart"></i></span>
+            </div>
+
+            <div class="top-bar-right">
+                <div class="top-bar-search">
+                    <span class="search-icon"><i class="fas fa-search color-grey"></i></span>
+                    <input type="text" class="search-form" placeholder="Search Music Here..">
+                    <span class="mic-icon">
+                        <i class="fas fa-microphone color-grey"></i>
+                        <i class="fas fa-circle"></i>
+                    </span>
+                </div>
+                <span class="notification-bell"><i class="fas fa-bell"></i></span>
+                <div class="user-icon">
+                    <a href=""><img src="images/user.jpg"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <nav id="queue-side-bar" class="queue-side-nav">
+            <div id="queue-nav-icon" class="queuehamburger animate__animated animate__fadeInRight">
+                <span class="queue-bar">
+                    <i class="material-icons md-36">queue_music</i>
+                </span>
+            </div>
+
+            <div class="queue-side-nav-list">
+
+                <section id="similar-art-sec">
+                    <div class="sec-heading">
+                        <h3>Similar Artist</h3>
+                        <span>View All</span>
+                    </div>
+
+                    <div id="similar-art-list" class="aside-list-wrapper">
+
+                        <div class="horz-list">
+                            <ul>
+                                <li class="song-img"><a href=""><img src="album/xxxxxxx.jpg"></a></li>
+                                <li class="ar-name"><a href="">XXXTentacion</a>
+                                    <p>Pop Artist</p>
+                                </li>
+                                <li class="list-icon"><i class="fas fa-ellipsis-h"></i><br>
+                                    <p>4:42</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="horz-list">
+                            <ul>
+                                <li class="song-img"><a href=""><img src="album/harrrrrrrrrrrrrrrr.jpg"></a></li>
+                                <li class="ar-name"><a href=""> Harry Styles</a>
+                                    <p>Pop Artist</p>
+                                </li>
+                                <li class="list-icon"><i class="fas fa-ellipsis-h"></i><br>
+                                    <p>3:24</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="horz-list">
+                            <ul>
+                                <li class="song-img"><a href=""><img src="album/cam1.jpg"></a></li>
+                                <li class="ar-name"><a href="">Camila Cabello</a>
+                                    <p>Pop Artist</p>
+                                </li>
+                                <li class="list-icon"><i class="fas fa-ellipsis-h"></i><br>
+                                    <p>4:12</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="recent-sec">
+                    <div class="sec-heading">
+                        <h3>Recently Played</h3>
+                        <span>View All</span>
+                    </div>
+
+                    <div id="recent-song-list" class="aside-list-wrapper">
+
+                        <div class="recent-list" tabindex="1">
+                            <ul>
+                                <li class="count"><span class="rank">01</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href=""><img src="album/xxxxxxx.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="#music-cnt">Whoa!</a>
+                                    <p>XXXTentacion</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list" tabindex="2">
+                            <ul>
+                                <li class="count"><span class="rank">02</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href="#music-cnt"><img src="album/500x500bb.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="#music-cnt">Changes</a>
+                                    <p>Justin Beiber</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list" tabindex=3">
+                            <ul>
+                                <li class="count"><span class="rank">03</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href="#music-cnt"><img src="album/taylor-swift-LOVER.jpg"></a>
+                                </li>
+                                <li class="recent-sng-name"><a href="#music-cnt">Lover</a>
+                                    <p>Taylor Swift</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list" tabindex="4">
+                            <ul>
+                                <li class="count"><span class="rank">04</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href="#music-cnt"><img
+                                            src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                                </li>
+                                <li class="recent-sng-name"><a href="#music-cnt">Havana</a>
+                                    <p>Camila Cabello</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list" tabindex="5">
+                            <ul>
+                                <li class="count"><span class="rank">05</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href="#music-cnt"><img
+                                            src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="#music-cnt">Young Thug</a>
+                                    <p>Lil Wayne</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list" tabindex="6">
+                            <ul>
+                                <li class="count"><span class="rank">06</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href="#music-cnt"><img
+                                            src="album/paul-kelly-nature-album-art-2018-billboard-embed-compressed.jpg"></a>
+                                </li>
+                                <li class="recent-sng-name"><a href="#music-cnt">Nurture</a>
+                                    <p>Paul Kelly</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list" tabindex="7">
+                            <ul>
+                                <li class="count"><span class="rank">07</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href="#music-cnt"><img src="album/500x500bb.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="#music-cnt">Changes</a>
+                                    <p>Justin Beiber</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list" tabindex="8">
+                            <ul>
+                                <li class="count"><span class="rank">08</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href="#music-cnt"><img src="album/taylor-swift-LOVER.jpg"></a>
+                                </li>
+                                <li class="recent-sng-name"><a href="#music-cnt">Lover</a>
+                                    <p>Taylor Swift</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list" tabindex="9">
+                            <ul>
+                                <li class="count"><span class="rank">09</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href="#music-cnt"><img
+                                            src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                                </li>
+                                <li class="recent-sng-name"><a href="#music-cnt">Havana</a>
+                                    <p>Camila Cabello</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+
+                        <div class="recent-list" tabindex="10">
+                            <ul>
+                                <li class="count"><span class="rank">10</span>
+                                    <span class="recent-play-icon"><a href="#music-cnt"><img
+                                                src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                                <li class="recent-img"><a href="#music-cnt"><img
+                                            src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                                <li class="recent-sng-name"><a href="#music-cnt">Young Thug</a>
+                                    <p>Lil Wayne</p>
+                                </li>
+                                <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                            class="far fa-heart"></i></button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cover ">
+            <div class="cover-image ">
+                <img src="album/unnamed (3).jpg">
+            </div>
+            <div class=gradient-container>
+                <div class="artist-details-container">
+
+                    <div class="artist-details">
+                        <div class="artist-info">
+                            <h2>Justin Bieber</h2>
+                            <div id="followers">2M Followers</div>
+                            <p class="country">American Singer</p>
+                            <p class="about">
+                                Over the course of his career, Bieber has amassed more 50 billion streams and more than
+                                60
+                                million album equivalents worldwide. Justin’s Grammy-winning 2015 album PURPOSE has sold
+                                over 21
+                                million copies worldwide. As he looks ahead to the 2020 arrival of his 5th studio album,
+                                Bieber
+                                is once again ruling the airwaves and dominating the charts, as his recent collaboration
+                                with Ed
+                                Sheeran “I Don’t Care” hit #1 in 26 countries worldwide.
+                            </p>
+
+                            <span class="track-num">201 Tracks | 14 Albums </span>
+                        </div>
+                        <div id="btn-sec">
+
+                            <button type="button" class="cover-btn"><i class="fas fa-play pad"></i>PLAY ALL</button>
+                            <button type="button" class="cover-btn"><i class="fas fa-random pad"></i>SHUFFLE</button>
+                            <button type="submit" class="cover-btn no-display"><i class="fas fa-podcast pad"></i>SUBSCRIBE</button>
+                            <button type="submit" class="cover-btn subscribe-s"><i class="fas fa-podcast pad animate__animated animate__fadeInLeft"></i></button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="songs-section">
+            <div class="section-heading">
+                <h3>Latest Release</h3>
+            </div>
+
+            <div id="list" class="list-wrapper">
+
+                <div class="horz-bar" tabindex="1" style="border-top: 0.5px solid #2f2f2f;">
+                    <ul class="left-list song-ul animate__animated animate__slideInLeft">
+                        <li class="index"><span class="pos">01</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href="#music-cnt"><img src="album/GrkPDIK.jpg"></a></li>
+                        <li class="song-nm"><a href="#music-cnt">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul animate__animated animate__slideInRight">
+
+                        <li><button type="button" class="ico-btn ripple"><i class="ico far fa-thumbs-up"></i></button>
+                        </li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+                <div class="horz-bar" tabindex="2">
+                    <ul class="left-list song-ul animate__animated animate__slideInLeft">
+                        <li class="index"><span class="pos">02</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href="#music-cnt"><img
+                                    src="album/The-Clash-London-Calling-album-covers-billboard-1000x1000-compressed.jpg"></a>
+                        </li>
+                        <li class="song-nm"><a href="#music-cnt">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+
+                        
+                    </ul>
+
+                    <ul class="right-list song-ul animate__animated animate__slideInLeft">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+
+                <div class="horz-bar" tabindex="3">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span style="visibility: hidden;">03</span>
+                            <div id="sound-bars">
+                                <div class="music-bar"></div>
+                                <div class="music-bar"></div>
+                                <div class="music-bar"></div>
+                                <div class="music-bar"></div>
+                                <div class="music-bar"></div>
+                                <!-- <div class="bar"></div> -->
+                                <!-- <div class="bar"></div>
+                                 <div class="bar"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>  -->
+                            </div>
+                        </li>
+                        <li class="thumb"><a href="#music-cnt"><img
+                                    src="album/kids-see-ghosts-album-art-2018-billboard-1240-1024x1024.jpg"></a></li>
+                        <li class="song-nm"><a href="#music-cnt">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+                <div class="horz-bar" tabindex="4">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span class="pos">04</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href="#music-cnt"><img
+                                    src="album/migos-culture-2-album-art-2018-billboard-1240-compressed.jpg"></a></li>
+                        <li class="song-nm"><a href="#music-cnt">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+                <div class="horz-bar" tabindex="5">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span class="pos">05</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href="#music-cnt"><img
+                                    src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                        <li class="song-nm"><a href="#music-cnt">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+                <div class="horz-bar" tabindex="6">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span class="pos">06</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href=""><img src="album/happy.jpg"></a></li>
+                        <li class="song-nm"><a href="">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+                <div class="horz-bar" tabindex="7">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span class="pos">07</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href=""><img
+                                    src="album/The-Clash-London-Calling-album-covers-billboard-1000x1000-compressed.jpg"></a>
+                        </li>
+                        <li class="song-nm"><a href="">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+
+                <div class="horz-bar" tabindex="8">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span class="pos">08</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href=""><img
+                                    src="album/kids-see-ghosts-album-art-2018-billboard-1240-1024x1024.jpg"></a></li>
+                        <li class="song-nm"><a href="">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+                <div class="horz-bar" tabindex="9">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span class="pos">09</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href=""><img
+                                    src="album/migos-culture-2-album-art-2018-billboard-1240-compressed.jpg"></a></li>
+                        <li class="song-nm"><a href="">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+                <div class="horz-bar" tabindex="10">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span class="pos">10</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href=""><img
+                                    src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                        <li class="song-nm"><a href="">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+                <div class="horz-bar" tabindex="11">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span class="pos">11</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href=""><img src="album/happy.jpg"></a></li>
+                        <li class="song-nm"><a href="">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+                <div class="horz-bar" tabindex="12">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span class="pos">12</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href=""><img
+                                    src="album/migos-culture-2-album-art-2018-billboard-1240-compressed.jpg"></a></li>
+                        <li class="song-nm"><a href="">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+                <div class="horz-bar" tabindex="13">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span class="pos">13</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href=""><img
+                                    src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                        <li class="song-nm"><a href="">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+                <div class="horz-bar" tabindex="14">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span class="pos">14</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href=""><img src="album/happy.jpg"></a></li>
+                        <li class="song-nm"><a href="">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+                <div class="horz-bar" tabindex="15">
+                    <ul class="left-list song-ul">
+                        <li class="index"><span class="pos">15</span>
+                            <span class="index-play-icon"><a href="#music-cnt"><img
+                                        src="album/round_play_arrow_white_36dp (2).png"></a></span>
+                        </li>
+                        <li class="thumb"><a href=""><img
+                                    src="album/The-Clash-London-Calling-album-covers-billboard-1000x1000-compressed.jpg"></a>
+                        </li>
+                        <li class="song-nm"><a href="">Stuck with U</a>
+                            <p>Justin Bieber</p>
+                        </li>
+                    </ul>
+
+                    <ul class="right-list song-ul">
+                        
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-up"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-thumbs-down"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico far fa-heart"></i></button></li>
+                        <li><button type="button" class="ico-btn"><i class="ico fas fa-plus"></i></button></li>
+                        <li class="time">3:44</li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <aside id="aside-section">
+            <section id="similar-art-sec">
+                <div class="sec-heading">
+                    <h3>Similar Artist</h3>
+                    <span>View All</span>
+                </div>
+
+                <div id="similar-art-list" class="aside-list-wrapper">
+
+                    <div class="horz-list">
+                        <ul>
+                            <li class="song-img"><a href=""><img src="album/xxxxxxx.jpg"></a></li>
+                            <li class="ar-name"><a href="">XXXTentacion</a>
+                                <p>Pop Artist</p>
+                            </li>
+                            <li class="list-icon"><i class="fas fa-ellipsis-h"></i><br>
+                                <p>4:42</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="horz-list">
+                        <ul>
+                            <li class="song-img"><a href=""><img src="album/harrrrrrrrrrrrrrrr.jpg"></a></li>
+                            <li class="ar-name"><a href=""> Harry Styles</a>
+                                <p>Pop Artist</p>
+                            </li>
+                            <li class="list-icon"><i class="fas fa-ellipsis-h"></i><br>
+                                <p>3:24</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="horz-list">
+                        <ul>
+                            <li class="song-img"><a href=""><img src="album/cam1.jpg"></a></li>
+                            <li class="ar-name"><a href="">Camila Cabello</a>
+                                <p>Pop Artist</p>
+                            </li>
+                            <li class="list-icon"><i class="fas fa-ellipsis-h"></i><br>
+                                <p>4:12</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="recent-sec">
+                <div class="sec-heading">
+                    <h3>Recently Played</h3>
+                    <span>View All</span>
+                </div>
+
+                <div id="recent-song-list" class="aside-list-wrapper">
+
+                    <div class="recent-list" tabindex="1">
+                        <ul>
+                            <li class="count"><span class="rank">01</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href=""><img src="album/xxxxxxx.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="#music-cnt">Whoa!</a>
+                                <p>XXXTentacion</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list" tabindex="2">
+                        <ul>
+                            <li class="count"><span class="rank">02</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href="#music-cnt"><img src="album/500x500bb.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="#music-cnt">Changes</a>
+                                <p>Justin Beiber</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list" tabindex=3">
+                        <ul>
+                            <li class="count"><span class="rank">03</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href="#music-cnt"><img src="album/taylor-swift-LOVER.jpg"></a>
+                            </li>
+                            <li class="recent-sng-name"><a href="#music-cnt">Lover</a>
+                                <p>Taylor Swift</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list" tabindex="4">
+                        <ul>
+                            <li class="count"><span class="rank">04</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href="#music-cnt"><img
+                                        src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                            </li>
+                            <li class="recent-sng-name"><a href="#music-cnt">Havana</a>
+                                <p>Camila Cabello</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list" tabindex="5">
+                        <ul>
+                            <li class="count"><span class="rank">05</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href="#music-cnt"><img
+                                        src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="#music-cnt">Young Thug</a>
+                                <p>Lil Wayne</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list" tabindex="6">
+                        <ul>
+                            <li class="count"><span class="rank">06</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href="#music-cnt"><img
+                                        src="album/paul-kelly-nature-album-art-2018-billboard-embed-compressed.jpg"></a>
+                            </li>
+                            <li class="recent-sng-name"><a href="#music-cnt">Nurture</a>
+                                <p>Paul Kelly</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list" tabindex="7">
+                        <ul>
+                            <li class="count"><span class="rank">07</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href="#music-cnt"><img src="album/500x500bb.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="#music-cnt">Changes</a>
+                                <p>Justin Beiber</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list" tabindex="8">
+                        <ul>
+                            <li class="count"><span class="rank">08</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href="#music-cnt"><img src="album/taylor-swift-LOVER.jpg"></a>
+                            </li>
+                            <li class="recent-sng-name"><a href="#music-cnt">Lover</a>
+                                <p>Taylor Swift</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list" tabindex="9">
+                        <ul>
+                            <li class="count"><span class="rank">09</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href="#music-cnt"><img
+                                        src="album/cd43c5e5e1242c8f52dc3a8ce299dc4c.jpg"></a>
+                            </li>
+                            <li class="recent-sng-name"><a href="#music-cnt">Havana</a>
+                                <p>Camila Cabello</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+
+                    <div class="recent-list" tabindex="10">
+                        <ul>
+                            <li class="count"><span class="rank">10</span>
+                                <span class="recent-play-icon"><a href="#music-cnt"><img
+                                            src="album/round_play_arrow_white_36dp (2).png"></a></span></li>
+                            <li class="recent-img"><a href="#music-cnt"><img
+                                        src="album/Young-Thug-Jeffery-2016-billboard-1240-1024x1024.jpg"></a></li>
+                            <li class="recent-sng-name"><a href="#music-cnt">Young Thug</a>
+                                <p>Lil Wayne</p>
+                            </li>
+                            <li class="hrt-icon"><button type="button" class="ico-btn"><i
+                                        class="far fa-heart"></i></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </main>
+
+    <footer id="music-cnt">
+        <div class="cross"><a href="#/"> X </a></div>
+        <div class="music-player-bar">
+            <div class="left-sec">
+                <ul class="list-cnt">
+                    <li class="thumb-pic"><a href=""><img src="album/500x500bb.jpg"></a></li>
+                    <li class="music-nm"><a href="">Let me love you</a>
+                        <p>Justin Bieber</p>
+                    </li>
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-18">favorite_border</i></button></li>
+                    <li><button type=button class="ico-btn"><i class=" material-icons md-light md-18">block</i></button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="middle-sec">
+                <ul class="list-cnt">
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-18">shuffle</i></button></li>
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-24">skip_previous</i></button></li>
+
+                    <li class=""><button type=button class="ico-btn play-pause"><img
+                                src="album/round_pause_white_36dp.png"></button></li>
+
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-24">skip_next</i></button></li>
+                    <li><button type=button class="ico-btn"><i class="material-icons md-light md-18">repeat</i></button>
+                    </li>
+                    <div class="seeker-container">
+                        <div class="seeker-out">
+                            <div class="seeker-in"></div>
+                        </div>
+
+                        <div class="seeker-knob">
+
+                        </div>
+                    </div>
+
+
+
+                </ul>
+
+            </div>
+
+            <ul class="right-sec">
+                <ul class="list-cnt">
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-24">playlist_play</i></button></li>
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-18">devices</i></button>
+                    </li>
+                    <li><button type=button class="ico-btn"><i
+                                class=" material-icons md-light md-18">volume_up</i></button>
+                    </li>
+
+                    <li>
+                        <div class="volm-container">
+                            <div class="volm-out">
+                                <div class="volm-in"></div>
+                            </div>
+
+                            <div class="volm-knob">
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="expand-btn"><button type=button class="ico-btn"><img
+                                src="album/01_maximize-expand-512.png"></button></li>
+                    <!-- <i class=" material-icons md-light md-18">open_in_full</i> -->
+                </ul>
+        </div>
+        </div>
+    </footer>
+
+    <script>
+        var overlay =
+            document.getElementById("overlay");
+
+        window.addEventListener('load', function () {
+            overlay.style.display = 'none';
+        })
+
+         var hamburger = document.getElementById("nav-icon");
+
+         hamburger.addEventListener("click", function () {
+             document.querySelector(".side-nav-list").classList.toggle("slide-in");
+             document.querySelector(".hamburger").classList.toggle("close");
+         });
+
+         var hamburger = document.getElementById("queue-nav-icon");
+
+         hamburger.addEventListener("click", function () {
+             document.querySelector(".queue-side-nav-list").classList.toggle("slide-in-right");
+             document.querySelector(".queuehamburger").classList.toggle("close");
+         });
+    </script>
+
+
+</body>
+
+</html>
