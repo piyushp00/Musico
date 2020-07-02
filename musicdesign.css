@@ -733,7 +733,12 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 @media only screen and (max-width: 601px) {
     
-
+   .spinner{
+    top: 43.5% !important;
+    left: 43.5% !important;
+    width: 55px !important;
+    height: 55px !important
+   }
 
     .top-bar{
         height: 27px !important;
