@@ -15,7 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/uqa7roz.css">
 
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
 
 
 
@@ -2387,19 +2391,21 @@
 
             <div class="middle-sec">
                 <ul class="list-cnt">
-                    <li><button type=button class="ico-btn"><i
+                    <li class="no-display-br"><button type=button class="ico-btn"><i
                                 class=" material-icons md-light md-18">shuffle</i></button></li>
                     <li><button type=button class="ico-btn"><i
                                 class=" material-icons md-light md-24">skip_previous</i></button></li>
 
-                    <li class=""><button type=button class="ico-btn play-pause"><img
-                                src="album/twotone_play_arrow_white_36dp (2).png"></button></li>
+                    <li class=""><button type=button class="ico-btn play-pause"><i class="material-icons-round">
+                                pause_circle_filled
+                            </i></button></li>
                     <!-- <li class=""><button type=button class="ico-btn play-pause"><i
                                 class="material-icons md-light md-48 ">pause_circle_outline</i></button></li> -->
 
                     <li><button type=button class="ico-btn"><i
                                 class=" material-icons md-light md-24">skip_next</i></button></li>
-                    <li><button type=button class="ico-btn"><i class="material-icons md-light md-18">repeat</i></button>
+                    <li class="no-display-br"><button type=button class="ico-btn"><i
+                                class="material-icons md-light md-18">repeat</i></button>
                     </li>
                     <div class="seeker-cnt">
                         <div class="seeker-out">
@@ -2409,6 +2415,10 @@
                         <div class="seeker-knob">
 
                         </div>
+
+                        <span class="time-left">1:12</span>
+
+                        <span class="time-right">4:34</span>
                     </div>
 
 
@@ -2417,14 +2427,28 @@
 
             </div>
 
-            <ul class="right-sec">
+            <div class="seeker-cnt-br">
+                <div class="seeker-out">
+                    <div class="seeker-in"></div>
+                </div>
+
+                <div class="seeker-knob">
+
+                </div>
+
+                <span class="time-left">1:12</span>
+
+                <span class="time-right">4:34</span>
+            </div>
+
+            <div class="right-sec">
                 <ul class="list-cnt">
                     <li><button type=button class="ico-btn"><i
                                 class=" material-icons md-light md-24">playlist_play</i></button></li>
                     <li><button type=button class="ico-btn"><i
                                 class=" material-icons md-light md-18">devices</i></button>
                     </li>
-                    <li><button type=button class="ico-btn"><i
+                    <li class=""><button type=button class="ico-btn volm-ico"><i
                                 class=" material-icons md-light md-18">volume_up</i></button>
                     </li>
 
@@ -2443,8 +2467,40 @@
                                 src="album/01_maximize-expand-512.png"></button></li>
                     <!-- <i class=" material-icons md-light md-18">open_in_full</i> -->
                 </ul>
+
+                <div class="right-sec-br">
+                    <div class="left-arrow"><i class="material-icons">arrow_left</i></div>
+                    <ul class="list-cnt-br">
+                        <li><button type=button class="ico-btn"><i
+                                    class=" material-icons md-light md-24">playlist_play</i></button></li>
+                        <li><button type=button class="ico-btn"><i
+                                    class=" material-icons md-light md-18">devices</i></button>
+                        </li>
+                        <li class=""><button type=button class="ico-btn volm-ico"><i
+                                    class=" material-icons md-light md-18">volume_up</i></button>
+                        </li>
+
+                        <li style="margin-bottom: 5px;">
+                            <div class="volm-cnt">
+                                <div class="volm-out">
+                                    <div class="volm-in"></div>
+                                </div>
+
+                                <div class="volm-knob">
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="expand-btn"><button type=button class="ico-btn"><img
+                                    src="album/01_maximize-expand-512.png"></button></li>
+                        <!-- <i class=" material-icons md-light md-18">open_in_full</i> -->
+                    </ul>
+                </div>
+            </div>
+
+
         </div>
-        </div>
+
     </footer>
 
 
