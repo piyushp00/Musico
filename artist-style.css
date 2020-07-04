@@ -618,11 +618,17 @@ body::-webkit-scrollbar-thumb:hover {
     .right-list .ico-btn {
         display: none;
     }
-    .ico-btn>.fa-heart {
-        display: block;
+
+    .ds>.ico-btn {
+        display: block !important;
     }
+
     #btn-sec button[type="button"] {
         width: 110px !important;
+    }
+
+    body{
+       overflow-x: hidden !important;
     }
 }
 
@@ -751,7 +757,11 @@ body::-webkit-scrollbar-thumb:hover {
     .seeker-cnt-br {
         margin-left: 40px !important;
     }
-}  
+}
+
+ .ds>.ico-btn {
+    visibility: visible !important;
+} 
 
 .cover {
     display: flex;
@@ -1941,7 +1951,7 @@ input:focus, select:focus, textarea:focus, button:focus {
     display: flex;
     position: absolute;
     width: 80%;
-    bottom: 14px;
+    bottom: 19px;
     margin-left: 2.1%;
     margin-right: 2.1%;
     align-items: center;
