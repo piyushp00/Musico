@@ -573,6 +573,15 @@ body::-webkit-scrollbar-thumb:hover {
     }
 }
 
+@media only screen and (max-width: 601px) {
+    .spinner {
+        top: 43.5% !important;
+        left: 43.5% !important;
+        width: 55px !important;
+        height: 55px !important
+    }
+}
+
 @media only screen and (max-width: 550px) {
     #btn-sec .no-display {
         display: none !important;
