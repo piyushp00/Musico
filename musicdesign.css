@@ -3098,8 +3098,16 @@ li:hover .queue-play {
 
 @media only screen and (max-width: 800px) {
     .seeker-cnt {
-        width: 100% !important;
-        margin: 0px 2px !important;
+        width: 80% !important;
+        
+    }
+
+    .time-left{
+        margin-left: -5px !important;
+    }
+
+    .time-right{
+        margin-right: -6px !important;
     }
     .left-sec {
         width: 25% !important;
@@ -3115,7 +3123,7 @@ li:hover .queue-play {
         left: 95% !important;
     }
     .right-sec {
-        width: 20% !important;
+        width: 25% !important;
         margin-right: 15px;
         padding-left: 0px;
         right: 5px;
@@ -3129,9 +3137,9 @@ li:hover .queue-play {
     .left-sec>.list-cnt>li>button {
         display: none !important;
     }
-    .right-sec>.list-cnt>li>button {
+    /* .right-sec>.list-cnt>li>button {
         display: none;
-    }
+    } */
     .volm-ico {
         display: block !important;
     }
@@ -3150,14 +3158,14 @@ li:hover .queue-play {
         top: 10px;
         right: 0px !important;
     }
-    .seeker-cnt {
+    /* .seeker-cnt {
         width: 70% !important;
         margin: 0px 2px !important;
         bottom: 14px !important;
-    }
+    } */
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 650px) {
     /* .music-player-bar{
          display: none !important;
      } */
@@ -3227,6 +3235,12 @@ li:hover .queue-play {
     }
 }
 
+@media only screen and (max-width: 400px){
+    .seeker-cnt-br{
+        margin-left: 40px !important;
+    }
+}
+
 .left-arrow {
     display: none;
 }
@@ -3281,6 +3295,18 @@ li:hover .queue-play {
 }
 
 .time-right {
+    position: absolute;
+    font-size: 10px;
+    right: -3%;
+}
+
+.time-left-br {
+    position: absolute;
+    font-size: 10px;
+    left: -8%;
+}
+
+.time-right-br {
     position: absolute;
     font-size: 10px;
     right: -3%;
