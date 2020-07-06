@@ -321,7 +321,7 @@ body::-webkit-scrollbar-thumb:hover {
     top: 2px;
 }
 
-.mic-icon {
+.top-bar-search>.mic-icon {
     position: relative;
     right: 30px;
     top: 2px;
@@ -380,7 +380,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 #header-btn button:hover {
     background: white;
-    /* color: #13386fe0; */
+    
     color: black;
 }
 
