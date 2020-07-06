@@ -311,12 +311,12 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: rgb(26, 26, 26);
     border-radius: 2px;
     border: 2px solid transparent;
-    box-shadow: 0px 0px 10px rgba(29, 29, 29, 0.55);
+    
 }
 
 .search-form:focus {
-    /* box-shadow: 0px 0px 10px rgba(59, 200, 231, 0.55); */
-    border: 1.5px solid white;
+    
+    border-bottom: 1px solid white;
     outline: none;
     background-color: transparent;
     color: rgb(223, 213, 213);
