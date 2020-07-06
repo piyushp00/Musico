@@ -325,11 +325,13 @@ body::-webkit-scrollbar-thumb:hover {
 .search-icon {
     position: relative;
     left: 35px;
+    top: 2px;
 }
 
 .mic-icon {
     position: relative;
     right: 30px;
+    top: 2px;
 }
 
 .mic-icon i:hover {
@@ -531,6 +533,7 @@ input:focus, select:focus, textarea:focus, button:focus {
     text-align: center;
     width: 40px;
     z-index: 10;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .carousel-control.prev {
@@ -572,7 +575,7 @@ input:focus, select:focus, textarea:focus, button:focus {
     color: #fff;
     cursor: pointer;
     display: block;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .carousel-bullet:hover {
@@ -920,7 +923,6 @@ input:focus, select:focus, textarea:focus, button:focus {
     animation-name: thumbnail-preview-1;
     animation-duration: 0.4s;
     animation-iteration-count: 1;
-    /* animation-fill-mode: forwards; */
     animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -988,11 +990,6 @@ input:focus, select:focus, textarea:focus, button:focus {
     width: 100%;
     height: 100%;
     display: inline-block;
-    /* background: -webkit-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%); */
-    /* background: linear-gradient( 90deg, rgb(22, 26, 46) 0%, rgb(237, 63, 179) 0%, rgb(59, 200, 231) 0%, rgba(32, 167, 196, 0) 100%); */
-    /* background: linear-gradient(to bottom, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%); */
-    /* background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59); */
-    /* background: linear-gradient(90deg, rgba(238,174,202,0.5) 0%, rgba(148,187,233,0.3) 100%); */
     background: linear-gradient(90deg, rgba(253, 29, 29, 0.3) 50%, rgba(252, 176, 69, 0.3) 100%);
     border-radius: 50%;
     -webkit-transition: all 0.2s;
@@ -1795,6 +1792,8 @@ input:focus, select:focus, textarea:focus, button:focus {
     visibility: hidden;
 }
 
+/* =====Material Icons CSS====== */
+
 .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
@@ -1870,7 +1869,6 @@ input:focus, select:focus, textarea:focus, button:focus {
 }
 
 .material-icons.md-light {
-    /* color: rgba(255, 255, 255, 1); */
     color: #a5a5a5;
 }
 
@@ -2285,8 +2283,6 @@ input:focus, select:focus, textarea:focus, button:focus {
     opacity: .3;
     transition: 0s;
 }
-
-
 
 @keyframes thumbnail-preview-1 {
     0% {
@@ -2708,99 +2704,6 @@ input:focus, select:focus, textarea:focus, button:focus {
     }
 }
 
-@media only screen and (max-width: 601px) {
-    .spinner {
-        top: 43.5% !important;
-        left: 43.5% !important;
-        width: 55px !important;
-        height: 55px !important
-    }
-    .top-bar {
-        height: 27px !important;
-    }
-    .side-nav .hamburger {
-        width: 32px;
-        height: 25px;
-        top: 11px;
-        left: 5px;
-    }
-    .side-nav .hamburger .bar {
-        width: 25px;
-        height: 2.1px;
-    }
-    .side-nav .hamburger .bar:after, .side-nav .hamburger .bar:before {
-        width: 25px;
-        height: 2.1px;
-    }
-    .queue-side-nav .queuehamburger {
-        top: 11px;
-    }
-    .queue-bar .material-icons {
-        font-size: 30px !important;
-    }
-    #logo {
-        margin-left: 27px !important;
-        margin-top: 8px;
-    }
-    #logo img {
-        height: 1.4rem !important;
-    }
-    .user-icon {
-        position: relative;
-        right: -13px;
-        top: 5px;
-    }
-    .user-icon img {
-        height: 1.9rem !important;
-    }
-    main {
-        margin: 3px !important;
-        font-size: 15px !important;
-    }
-    #carsl {
-        width: 100% !important;
-        margin-top: 22px !important;
-    }
-    .section {
-        padding: 0px !important;
-    }
-    .latest-release-container {
-        padding: 0px !important;
-    }
-    .album-container {
-        max-width: 185px !important;
-    }
-    .play-icon {
-        top: 60.5% !important;
-    }
-    .option-icon {
-        top: 60.5% !important;
-        left: 79.5% !important;
-    }
-    .dropdown-list {
-        width: 110px !important;
-        height: 135px !important;
-        left: 36% !important;
-        top: 2% !important;
-    }
-    .artist {
-        max-width: 150px !important;
-    }
-    .artist-container {
-        padding: 0px !important;
-    }
-    .ar-play {
-        top: 31% !important;
-        left: 34% !important;
-    }
-    .latest-eng-container {
-        padding: 0px !important;
-    }
-    .stn-info a {
-        bottom: 81px !important;
-    }
-}
-
 @media only screen and (max-width: 1025px) {
     .middle-sec>ul>li {
         margin-left: 0px !important;
@@ -2899,6 +2802,99 @@ input:focus, select:focus, textarea:focus, button:focus {
     }
 }
 
+@media only screen and (max-width: 601px) {
+    .spinner {
+        top: 43.5% !important;
+        left: 43.5% !important;
+        width: 55px !important;
+        height: 55px !important
+    }
+    .top-bar {
+        height: 27px !important;
+    }
+    .side-nav .hamburger {
+        width: 32px;
+        height: 25px;
+        top: 11px;
+        left: 5px;
+    }
+    .side-nav .hamburger .bar {
+        width: 25px;
+        height: 2.1px;
+    }
+    .side-nav .hamburger .bar:after, .side-nav .hamburger .bar:before {
+        width: 25px;
+        height: 2.1px;
+    }
+    .queue-side-nav .queuehamburger {
+        top: 11px;
+    }
+    .queue-bar .material-icons {
+        font-size: 30px !important;
+    }
+    #logo {
+        margin-left: 27px !important;
+        margin-top: 8px;
+    }
+    #logo img {
+        height: 1.4rem !important;
+    }
+    .user-icon {
+        position: relative;
+        right: -13px;
+        top: 5px;
+    }
+    .user-icon img {
+        height: 1.9rem !important;
+    }
+    main {
+        margin: 3px !important;
+        font-size: 15px !important;
+    }
+    #carsl {
+        width: 100% !important;
+        margin-top: 22px !important;
+    }
+    .section {
+        padding: 0px !important;
+    }
+    .latest-release-container {
+        padding: 0px !important;
+    }
+    .album-container {
+        max-width: 185px !important;
+    }
+    .play-icon {
+        top: 60.5% !important;
+    }
+    .option-icon {
+        top: 60.5% !important;
+        left: 79.5% !important;
+    }
+    .dropdown-list {
+        width: 110px !important;
+        height: 135px !important;
+        left: 36% !important;
+        top: 2% !important;
+    }
+    .artist {
+        max-width: 150px !important;
+    }
+    .artist-container {
+        padding: 0px !important;
+    }
+    .ar-play {
+        top: 31% !important;
+        left: 34% !important;
+    }
+    .latest-eng-container {
+        padding: 0px !important;
+    }
+    .stn-info a {
+        bottom: 81px !important;
+    }
+}
+
 @media only screen and (max-width: 580px) {
     .genre-br-song {
         max-width: 182px !important;
@@ -2926,10 +2922,10 @@ input:focus, select:focus, textarea:focus, button:focus {
         margin: 3px !important;
     }
     .play-icon {
-        top: 57% !important;
+        top: 61% !important;
     }
     .option-icon {
-        top: 57% !important;
+        top: 61% !important;
         left: 77% !important;
     }
     .artist-container {
@@ -2953,14 +2949,14 @@ input:focus, select:focus, textarea:focus, button:focus {
         padding: 3px !important;
     }
     .song-play {
-        top: 61% !important;
+        top: 65% !important;
         left: 8% !important;
     }
     .dropdown-list {
-        width: 110px !important;
+        width: 130px !important;
         height: 135px !important;
-        left: 36% !important;
-        top: -2% !important;
+        left: 11% !important;
+        top: 3% !important;
     }
     .latest-eng-container {
         padding: 0px !important;
@@ -2972,6 +2968,10 @@ input:focus, select:focus, textarea:focus, button:focus {
     .gen-nm a {
         font-size: 1rem !important;
     }
+    .ar-play {
+        top: 33.5% !important;
+        left: 36% !important;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -2979,6 +2979,12 @@ input:focus, select:focus, textarea:focus, button:focus {
         width: 115px !important;
         top: 10px;
         right: 0px !important;
+    }
+    .dropdown-list {
+        width: 130px !important;
+        height: 135px !important;
+        left: 11% !important;
+        top: 3% !important;
     }
 }
 
@@ -2998,6 +3004,16 @@ input:focus, select:focus, textarea:focus, button:focus {
     .mood-song {
         max-width: 163px !important;
         margin: 5px 0px 0px 3px;
+    }
+    .dropdown-list {
+        width: 130px !important;
+        height: 135px !important;
+        left: 9% !important;
+        top: -2% !important;
+    }
+    .song-play {
+        top: 62% !important;
+        left: 8% !important;
     }
 }
 

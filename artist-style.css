@@ -6,7 +6,7 @@ Project: Music Player Project[CSS] - Online Music Player
 Version: 1.0.0 
 Author: PiyushPandey
 
----------------****************************-----------------
+---------------**********************************-------------
 
 [Table of contents] 
 1. Body CSS
@@ -14,28 +14,22 @@ Author: PiyushPandey
 3. Side Naviagtion Breakpoint CSS
 4. Header CSS Starts
 5. Top Menu Bar CSS 
-6. Side breakpoint queue list CSS
-7. Main CSS Starts
-8. Carousel Section CSS Starts
-9. Latest Release Section CSS
-10.Artist Section CSS
-11.Popular Stations Section CSS
-12.Top Generes Section CSS
-13.Genre Breakpoint Section CSS Starts
-14.Muisc by Mood Section CSS 
-15.Common Song Section CSS Starts
-16.New Music Section / Latest English Section / Pop Section Section
-17.Aside Section CSS Starts
-18.Queue List CSS
-19.Footer Section CSS Starts
-20.Muisc Control Bar CSS 
-21.Left Section CSS
-22.Middle Section CSS
-23.Right Section CSS
-24.Right Section Breakpoint CSS 
-25.Small Buttons CSS
-26.KEYFRAME ANIMATIONS CSS
-27.Media Queries
+6. Main CSS Starts
+7. Artist Cover Section CSS Start
+8. Song Section CSS Starts
+9. Material Icons CSS
+10.Aside Section CSS Starts
+11.Similar Artist Section CSS Start
+12.Recently Played Section CSS Starts
+13.Footer Section CSS Starts
+14.Muisc Control Bar CSS 
+15.Left Section CSS
+16.Middle Section CSS
+17.Right Section CSS
+18.Right Section Breakpoint CSS 
+19.Small Buttons CSS
+20.KEYFRAME ANIMATIONS CSS
+21.Media Queries
 
 -------------------------------------------------------------------*/
 
@@ -236,7 +230,7 @@ body::-webkit-scrollbar-thumb:hover {
     top: 31px;
 }
 
-.side-bar-search>.mic-icon {
+.side-bar-search .mic-icon {
     position: relative;
     right: -42%;
     bottom: 31px;
@@ -306,18 +300,14 @@ body::-webkit-scrollbar-thumb:hover {
     color: #777777;
     background-color: rgba(44, 43, 43, 0.9);
     border-radius: 3px;
-    /* border: 1px solid transparent; */
     border: 2px solid transparent;
-    box-shadow: 0px 0px 10px rgba(29, 29, 29, 0.55);
 }
 
 .search-form:focus {
-    /* box-shadow: 0px 0px 10px rgba(59, 200, 231, 0.55); */
-    /* border: 1px solid #3bc8e7; */
-    border: 1.5px solid white;
+    border-bottom: 1px solid white;
     outline: none;
     background-color: transparent;
-    color: rgb(223, 213, 213);
+    color: rgb(255, 255, 255);
 }
 
 .search-icon {
@@ -330,7 +320,7 @@ body::-webkit-scrollbar-thumb:hover {
     color: honeydew;
 }
 
-.mic-icon {
+.top-bar-search>.mic-icon {
     position: relative;
     right: 30px;
     top: 2.6px;
@@ -375,7 +365,7 @@ body::-webkit-scrollbar-thumb:hover {
     visibility: visible !important;
 }
 
-/* ==========Artist Cover Section Starts====== */
+/* ==========Artist Cover Section CSS Start====== */
 
 .cover {
     display: flex;
@@ -431,6 +421,7 @@ body::-webkit-scrollbar-thumb:hover {
     display: inline-block;
     font-size: 2.7rem;
     vertical-align: middle;
+    white-space: nowrap;
 }
 
 #followers {
@@ -546,6 +537,8 @@ input:focus, select:focus, textarea:focus, button:focus {
     -webkit-animation: slit-in-diagonal-2 0.45s ease-out both;
     animation: slit-in-diagonal-2 0.45s ease-out both;
 }
+
+/* =========Song Section CSS Starts====== */
 
 #songs-section {
     width: 68%;
@@ -722,7 +715,6 @@ input:focus, select:focus, textarea:focus, button:focus {
 .thumb {
     max-width: 40px;
     overflow: hidden;
-    /* margin:0px 10px;  */
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -741,7 +733,6 @@ input:focus, select:focus, textarea:focus, button:focus {
     color: rgb(238, 234, 234);
     line-height: 0px;
     font-size: 14px;
-    /* font-weight: bold; */
 }
 
 .song-nm p {
@@ -757,6 +748,8 @@ input:focus, select:focus, textarea:focus, button:focus {
     font-size: 13px;
     color: rgb(179, 170, 170)
 }
+
+/* =======Material Icons CSS====== */
 
 .material-icons {
     font-family: 'Material Icons';
