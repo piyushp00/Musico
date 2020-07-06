@@ -856,6 +856,8 @@ input:focus, select:focus, textarea:focus, button:focus {
     padding-top: 7px;
 }
 
+/* =========Similar Artist Section CSS Starts=======*/
+
 #similar-art-sec {
     overflow: hidden;
     position: relative;
@@ -879,7 +881,6 @@ input:focus, select:focus, textarea:focus, button:focus {
 #similar-art-sec>.sec-heading>span {
     display: inline-block;
     font-size: 14px;
-    /* float: right; */
     position: relative;
     left: 8%;
     overflow: hidden;
@@ -909,7 +910,6 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .horz-list>ul {
     list-style: none;
-    /* border: 1px solid white; */
     padding: 0px;
     margin: 0px;
     display: flex;
@@ -917,29 +917,20 @@ input:focus, select:focus, textarea:focus, button:focus {
     overflow: hidden;
     width: 100%;
     margin-bottom: 2px;
-    /* align-items: center; */
-    /* justify-content: space-between;   */
 }
 
 .horz-list>ul>li {
     display: inline-block;
-    /* border: 1px solid white; */
     padding: 0;
-    /* margin: 0; */
     text-transform: capitalize;
     position: relative;
-    /* vertical-align: middle; */
     padding: 5px 5px;
     overflow: hidden;
-    /* padding: 5px 10px; */
 }
 
 .song-img {
     max-width: 90px;
-    /* border-radius: 50%; */
-    /* border: 2px solid white; */
     overflow: hidden;
-    /* margin:0px 10px;  */
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -952,8 +943,6 @@ input:focus, select:focus, textarea:focus, button:focus {
     width: 100%;
     height: 100%;
     border-radius: 3px;
-    /* border-radius: 50%;  */
-    /* border: 2px solid white; */
 }
 
 .ar-name {
@@ -975,7 +964,6 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .list-icon {
     vertical-align: middle;
-    /* margin-left: 65px;  */
     position: relative;
     float: right;
 }
@@ -990,8 +978,9 @@ input:focus, select:focus, textarea:focus, button:focus {
     top: 25px;
 }
 
+/* =====Recently Played Section CSS Starts===== */
+
 #recent-sec {
-    /* border: 1px solid white; */
     overflow: hidden;
     position: relative;
     display: flex;
@@ -999,10 +988,6 @@ input:focus, select:focus, textarea:focus, button:focus {
     flex-wrap: nowrap;
     box-sizing: border-box;
 }
-
-/* #simlar-artist-sec > .section-heading{
-    margin-left: 5px;
-} */
 
 #recent-sec>.sec-heading>h3 {
     display: inline-block;
@@ -1014,7 +999,6 @@ input:focus, select:focus, textarea:focus, button:focus {
 #recent-sec>.sec-heading>span {
     display: inline-block;
     font-size: 14px;
-    /* float: right; */
     position: relative;
     left: 8%;
     overflow: hidden;
@@ -1057,7 +1041,6 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .recent-list>ul {
     list-style: none;
-    /* border: 1px solid white; */
     padding: 0px;
     margin: 0px;
     display: flex;
@@ -1065,43 +1048,30 @@ input:focus, select:focus, textarea:focus, button:focus {
     overflow: hidden;
     width: 100%;
     margin-bottom: 2px;
-    /* align-items: center; */
-    /* justify-content: space-between;   */
 }
 
 .recent-list>ul>li {
     display: inline-block;
-    /* border: 1px solid white; */
     padding: 0;
-    /* margin: 0; */
     text-transform: capitalize;
     position: relative;
-    /* vertical-align: middle; */
     padding: 5px 5.7px;
     overflow: hidden;
-    /* padding: 5px 10px; */
 }
 
 .recent-img {
     max-width: 45px;
-    /* border-radius: 50%; */
-    /* border: 2px solid white; */
     overflow: hidden;
-    /* margin:0px 10px;  */
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
     line-height: 0px;
     vertical-align: middle;
-    /* margin-left: 5px; */
 }
 
 .recent-img img {
     width: 100%;
-    /* height: 100%; */
     border-radius: 3px;
-    /* border-radius: 50%;  */
-    /* border: 2px solid white; */
 }
 
 .recent-sng-name {
@@ -1123,7 +1093,6 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .hrt-icon {
     vertical-align: middle;
-    /* margin-left: 65px;  */
     position: relative;
     float: right;
     top: 10px;
@@ -1135,14 +1104,11 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .count {
     position: relative;
-    /* vertical-align: middle; */
     top: 12px;
     font-size: 16px;
 }
 
 .rank {
-    /* padding-left: 9px; */
-    /* margin-top: 5px;  */
     margin-left: 3px;
     visibility: visible;
 }
@@ -1156,7 +1122,6 @@ input:focus, select:focus, textarea:focus, button:focus {
     top: 50%;
     width: 30px;
     height: 30px;
-    /* background: rgba(255, 255, 255, 0.95); */
     border-radius: 50%;
     overflow: hidden;
 }
@@ -1166,41 +1131,391 @@ input:focus, select:focus, textarea:focus, button:focus {
     width: 100%;
 }
 
-/* .recent-list:hover{
-     border-radius: 10px; 
-      background-color: #1f1f1f; 
-     background-color: #071e36; 
-
-      border: none; 
-      border: 1px solid transparent; 
-} */
-
 .recent-list:focus {
-    /* background-color: #0a84ff; 
-    background-color:rgb(255, 136, 0) ; 
-    
-     color: black; 
-    border-radius: 3px;
-      border-bottom: 0.5px solid transparent;    */
     outline: none;
 }
 
 .recent-list:hover .recent-play-icon {
     visibility: visible;
-    /* background-color: #8f8985; */
-    /* background: rgba(104, 103, 103,0.7);  */
     background: rgba(143, 137, 133, 0.5);
     border-radius: 50%;
 }
 
 .recent-list>ul>.count>.recent-play-icon:hover {
-    /* background-color: #0a84ff; */
-    background-color: rgb(34, 82, 216);
+    background-color: #1db954;
 }
 
 .recent-list:hover .rank {
     visibility: hidden;
 }
+
+/* ======Footer Section CSS Starts======= */
+
+#music-cnt:target {
+    visibility: visible;
+    height: 93px;
+    opacity: 1;
+    position: sticky;
+    transition: all 0.4s ease-in-out;
+}
+
+#music-cnt {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 0px;
+    background: #131313;
+    z-index: 999999;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cross {
+    position: absolute;
+    left: 97.5%;
+    top: -3px;
+    display: block;
+}
+
+.cross a {
+    text-decoration: none;
+    font-size: 10px;
+    color: grey;
+}
+
+/*=====Muisc Control Bar CSS Starts======  */
+
+.music-player-bar {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* ====Left Section CSS====  */
+
+.left-sec {
+    width: 292px;
+    display: inline-block;
+    position: relative;
+}
+
+.left-sec ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.left-sec>ul>li>button {
+    position: relative;
+    bottom: 9px;
+    left: 2px;
+}
+
+.list-cnt {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.list-cnt>li>button {
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.list-cnt li {
+    display: inline-block;
+    position: relative;
+}
+
+.thumb-pic {
+    max-width: 45px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    line-height: 0px;
+    right: 5px;
+}
+
+.thumb-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.music-nm {
+    padding-left: 2px;
+    width: 35%;
+    overflow: hidden;
+    bottom: 7px;
+}
+
+.music-nm a {
+    text-decoration: none;
+    color: rgb(165, 161, 161);
+    line-height: 0px;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.music-nm p {
+    font-size: 13px;
+    padding: 0px 0px;
+    line-height: 0px;
+    color: rgb(158, 151, 151);
+    margin-bottom: 8px;
+    margin-top: 8px;
+    white-space: nowrap;
+}
+
+/* ======Middle Section CSS===== */
+
+.middle-sec {
+    width: 550px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+}
+
+.middle-sec>ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 15px;
+    height: 50%;
+    margin-top: 3px;
+}
+
+.middle-sec>ul>li {
+    padding-right: 5px;
+    margin-left: 20px;
+    margin-top: 15px;
+    border-radius: 50%;
+}
+
+.play-pause img {
+    border-radius: 50%;
+    border: 0.5px solid white;
+}
+
+.play-pause>.material-icons-round {
+    color: rgb(224, 219, 219);
+    font-size: 50px;
+}
+
+.seeker-container {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    bottom: 19px;
+    margin-left: 2.1%;
+    margin-right: 2.1%;
+    align-items: center;
+    justify-content: center;
+}
+
+.seeker-out {
+    height: 1px;
+    width: 90%;
+    background-color: #404040;
+    border-radius: 8px;
+    z-index: -1;
+    padding: 1px;
+    margin: 0;
+}
+
+.seeker-in {
+    position: absolute;
+    width: 35%;
+    background-color: #35e688;
+    height: 4px;
+    z-index: 1;
+    border-radius: 20px;
+    left: 0.5px;
+    bottom: 1px;
+    right: 0;
+    top: 0;
+}
+
+.seeker-knob-cnt {
+    position: absolute;
+}
+
+.seeker-knob {
+    position: absolute;
+    padding: 8px;
+    top: -6.5px;
+    left: 34.5%;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 5;
+}
+
+.time-left {
+    position: absolute;
+    font-size: 10px;
+    left: -8%;
+}
+
+.time-right {
+    position: absolute;
+    font-size: 10px;
+    right: -3%;
+}
+
+.seeker-cnt-br {
+    display: none;
+    position: absolute;
+    width: 80%;
+    bottom: 15px;
+    margin-left: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-left-br {
+    position: absolute;
+    font-size: 10px;
+    left: -8%;
+}
+
+.time-right-br {
+    position: absolute;
+    font-size: 10px;
+    right: -3%;
+}
+
+/* ======Right Section CSS===== */
+
+.right-sec {
+    width: 292px;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    top: 24px;
+}
+
+.right-sec>ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.right-sec>ul>li {
+    margin: 3px;
+}
+
+.volm-container {
+    display: block;
+    position: relative;
+    bottom: 3.5px;
+    right: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+.volm-out {
+    height: 3px;
+    width: 100px;
+    background-color: #404040;
+    border-radius: 8px;
+    z-index: -1;
+    margin: 0;
+}
+
+.volm-in {
+    position: relative;
+    width: 40%;
+    background-color: #35e688;
+    height: 4px;
+    z-index: 1;
+    border-radius: 8px;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.volm-knob-cnt {
+    position: absolute;
+}
+
+.volm-knob {
+    position: absolute;
+    padding: 8px;
+    top: -6.5px;
+    left: 35.5%;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 5;
+}
+
+.expand-btn {
+    bottom: 5px;
+    width: 33px;
+    height: 33px;
+}
+
+.expand-btn>button>img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ======Right Section Breakpoint CSS=======*/
+
+.left-arrow {
+    display: none;
+}
+
+.left-arrow>.material-icons {
+    color: #a5a5a5;
+}
+
+.list-cnt-br {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: absolute;
+    height: 40px;
+    right: 50px;
+    top: -10px;
+    width: 250px;
+    background: #282828;
+    align-items: center;
+    vertical-align: middle;
+    z-index: 5;
+    border-radius: 3px;
+}
+
+.list-cnt-br>li>button {
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.list-cnt-br li {
+    display: inline-block;
+    position: relative;
+}
+
+.right-sec-br {
+    margin-left: 12px;
+}
+
+.right-sec-br:hover .list-cnt-br {
+    display: block;
+}
+
+/* ====Small Buttons CSS Starts==== */
 
 .ico-btn {
     border: none;
@@ -1244,381 +1559,7 @@ input:focus, select:focus, textarea:focus, button:focus {
     transition: 0s;
 }
 
-/* Music Controls */
-
-#music-cnt:target {
-    visibility: visible;
-    height: 93px;
-    opacity: 1;
-    position: sticky;
-    transition: all 0.4s ease-in-out;
-}
-
-#music-cnt {
-    position: sticky;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 0px;
-    background: #131313;
-    z-index: 999999;
-    margin: 0;
-    padding: 0;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.cross {
-    position: absolute;
-    left: 97.5%;
-    top: -3px;
-    display: block;
-}
-
-.cross a {
-    text-decoration: none;
-    font-size: 10px;
-    color: grey;
-}
-
-.music-player-bar {
-    display: flex;
-    justify-content: space-between;
-    /* padding: 0px 15px; */
-    box-sizing: border-box;
-}
-
-.list-cnt {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-.list-cnt>li>button {
-    background-color: transparent;
-    border-radius: 50%;
-}
-
-.list-cnt li {
-    display: inline-block;
-    position: relative;
-}
-
-.thumb-pic {
-    max-width: 45px;
-    overflow: hidden;
-    /* margin:0px 10px;  */
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    line-height: 0px;
-    right: 5px;
-}
-
-.thumb-pic img {
-    width: 100%;
-    height: 100%;
-    border-radius: 2px;
-}
-
-.music-nm {
-    padding-left: 2px;
-    width: 35%;
-    overflow: hidden;
-    bottom: 7px;
-}
-
-.music-nm a {
-    text-decoration: none;
-    color: rgb(165, 161, 161);
-    line-height: 0px;
-    font-size: 16px;
-    overflow: hidden;
-    white-space: nowrap;
-    /* font-weight: bold; */
-}
-
-.music-nm p {
-    font-size: 13px;
-    padding: 0px 0px;
-    /* margin-top: 8px; */
-    line-height: 0px;
-    color: rgb(158, 151, 151);
-    margin-bottom: 8px;
-    margin-top: 8px;
-    white-space: nowrap;
-}
-
-.left-sec {
-    width: 292px;
-    display: inline-block;
-    position: relative;
-}
-
-.left-sec ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.left-sec>ul>li>button {
-    position: relative;
-    bottom: 9px;
-    left: 2px;
-}
-
-.middle-sec {
-    width: 550px;
-    display: inline-block;
-    overflow: hidden;
-    position: relative;
-    width: 50%;
-}
-
-.middle-sec>ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: 15px;
-    height: 50%;
-    margin-top: 3px;
-}
-
-.middle-sec>ul>li {
-    padding-right: 5px;
-    margin-left: 20px;
-    margin-top: 15px;
-    border-radius: 50%;
-}
-
-/* <i class="pb material-icons md-light md-36">pause</i> */
-
-.play-pause img {
-    border-radius: 50%;
-    border: 0.5px solid white;
-}
-
-.play-pause>.material-icons-round {
-    color: rgb(224, 219, 219);
-    font-size: 50px;
-}
-
-.seeker-container {
-    display: flex;
-    position: absolute;
-    width: 80%;
-    bottom: 19px;
-    margin-left: 2.1%;
-    margin-right: 2.1%;
-    align-items: center;
-    justify-content: center;
-}
-
-.seeker-out {
-    /* border: 1px  solid white; */
-    height: 1px;
-    width: 90%;
-    background-color: #404040;
-    border-radius: 8px;
-    /* padding: 2px; */
-    z-index: -1;
-    padding: 1px;
-    margin: 0;
-}
-
-.seeker-in {
-    position: absolute;
-    width: 35%;
-    background-color: #35e688;
-    height: 4px;
-    z-index: 1;
-    border-radius: 20px;
-    left: 0.5px;
-    bottom: 1px;
-    right: 0;
-    top: 0;
-}
-
-.seeker-knob-cnt {
-    position: absolute;
-}
-
-.seeker-knob {
-    position: absolute;
-    /* height: 15px; */
-    /* width: 15px; */
-    padding: 8px;
-    top: -6.5px;
-    left: 34.5%;
-    border-radius: 50%;
-    background-color: #ffffff;
-    z-index: 5;
-}
-
-.right-sec {
-    width: 292px;
-    display: inline-block;
-    position: relative;
-    height: 100%;
-    top: 24px;
-}
-
-.right-sec>ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-.right-sec>ul>li {
-    margin: 3px;
-}
-
-.volm-container {
-    display: block;
-    position: relative;
-    bottom: 3.5px;
-    right: 6px;
-    align-items: center;
-    justify-content: center;
-}
-
-.volm-out {
-    /* border: 1px  solid white; */
-    height: 3px;
-    width: 100px;
-    background-color: #404040;
-    border-radius: 8px;
-    /* padding: 2px; */
-    z-index: -1;
-    /* padding: 1px; */
-    margin: 0;
-}
-
-.volm-in {
-    position: relative;
-    width: 40%;
-    background-color: #35e688;
-    height: 4px;
-    z-index: 1;
-    border-radius: 8px;
-    left: 0;
-    /* bottom: 1px; */
-    right: 0;
-    top: 0;
-}
-
-.volm-knob-cnt {
-    position: absolute;
-}
-
-.volm-knob {
-    position: absolute;
-    /* height: 15px; */
-    /* width: 15px; */
-    padding: 8px;
-    top: -6.5px;
-    left: 35.5%;
-    border-radius: 50%;
-    background-color: #ffffff;
-    z-index: 5;
-}
-
-.expand-btn {
-    /* right: 5px; */
-    bottom: 5px;
-    width: 33px;
-    height: 33px;
-    /* border-radius: 50%; */
-    /* overflow: hidden; */
-}
-
-.expand-btn>button>img {
-    width: 100%;
-    height: 100%;
-}
-
-.left-arrow {
-    display: none;
-}
-
-.left-arrow>.material-icons {
-    color: #a5a5a5;
-}
-
-.list-cnt-br {
-    display: none;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    /* display: flex; */
-    position: absolute;
-    height: 40px;
-    right: 50px;
-    top: -10px;
-    width: 250px;
-    background: #282828;
-    align-items: center;
-    vertical-align: middle;
-    z-index: 5;
-    border-radius: 3px;
-}
-
-.list-cnt-br>li>button {
-    background-color: transparent;
-    border-radius: 50%;
-}
-
-.list-cnt-br li {
-    display: inline-block;
-    position: relative;
-}
-
-.seeker-cnt-br {
-    display: none;
-    position: absolute;
-    width: 80%;
-    bottom: 15px;
-    margin-left: 50px;
-    align-items: center;
-    justify-content: center;
-}
-
-.time-left {
-    position: absolute;
-    font-size: 10px;
-    left: -8%;
-}
-
-.time-right {
-    position: absolute;
-    font-size: 10px;
-    right: -3%;
-}
-
-.time-left-br {
-    position: absolute;
-    font-size: 10px;
-    left: -8%;
-}
-
-.time-right-br {
-    position: absolute;
-    font-size: 10px;
-    right: -3%;
-}
-
-.right-sec-br {
-    margin-left: 12px;
-}
-
-.right-sec-br:hover .list-cnt-br {
-    display: block;
-}
+/* =========KEYFRAME ANIMATIONS========= */
 
 @-webkit-keyframes sk-bounce {
     0%, 100% {
@@ -1674,6 +1615,8 @@ input:focus, select:focus, textarea:focus, button:focus {
     }
 }
 
+/* =========Media Queries Start======== */
+
 @media only screen and (max-width: 1090px) {
     #logo {
         margin-left: 35px !important;
@@ -1685,11 +1628,8 @@ input:focus, select:focus, textarea:focus, button:focus {
         margin-right: 15px !important;
     }
     .user-icon {
-        /* margin-left: 35px !important; */
         height: 2.5rem;
         width: 2rem;
-        /* padding: 0px 20px; */
-        /* padding-right: 0px; */
     }
     .user-icon img {
         height: 2.4rem !important;
@@ -1721,6 +1661,12 @@ input:focus, select:focus, textarea:focus, button:focus {
     }
 }
 
+@media only screen and (max-width: 1025px) {
+    .middle-sec>ul>li {
+        margin-left: 0px !important;
+    }
+}
+
 @media only screen and (max-width: 1010px) {
     .about {
         display: none !important;
@@ -1737,9 +1683,6 @@ input:focus, select:focus, textarea:focus, button:focus {
     #songs-section {
         top: 40px !important;
     }
-    /* .track-num{
-    visibility:hidden !important; 
-} */
     .country {
         top: 25px !important;
         font-weight: normal !important;
@@ -1766,6 +1709,46 @@ input:focus, select:focus, textarea:focus, button:focus {
         padding: 0.6em 0.6em 0.68em !important;
         line-height: 0.8 !important;
         font-size: 0.8rem !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .seeker-container {
+        width: 80% !important;
+    }
+    .time-left {
+        margin-left: -5px !important;
+    }
+    .time-right {
+        margin-right: -6px !important;
+    }
+    .left-sec {
+        width: 25% !important;
+        padding-left: 5px !important;
+    }
+    .music-nm {
+        width: 50% !important;
+    }
+    .middle-sec {
+        width: 40% !important;
+    }
+    .cross {
+        left: 95% !important;
+    }
+    .right-sec {
+        width: 25% !important;
+        margin-right: 15px;
+        padding-left: 0px;
+        right: 5px;
+    }
+    .volm-container {
+        margin-left: 5px !important;
+    }
+    .left-sec>.list-cnt>li>button {
+        display: none !important;
+    }
+    .volm-ico {
+        display: block !important;
     }
 }
 
@@ -1826,124 +1809,6 @@ input:focus, select:focus, textarea:focus, button:focus {
     #songs-section {
         top: 10px !important;
     }
-}
-
-@media only screen and (max-width: 601px) {
-    .spinner {
-        top: 43.5% !important;
-        left: 43.5% !important;
-        width: 55px !important;
-        height: 55px !important
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    #btn-sec .no-display {
-        display: none !important;
-    }
-    #btn-sec button[type="button"] {
-        width: 110px !important;
-        padding: 0.5em 0.5em 0.68em !important;
-    }
-    #btn-sec button[type="submit"] {
-        width: 40px !important;
-        padding: 0.5em 0.6em 0.68em !important;
-        padding-left: 0.84em !important;
-    }
-    .subscribe-s {
-        display: block !important;
-    }
-    #followers {
-        bottom: 13px !important;
-        font-size: 12px !important;
-        left: 150% !important;
-    }
-}
-
-@media only screen and (max-width: 501px) {
-    .gradient-container {
-        top: -25px !important;
-    }
-    .artist-details-container {
-        top: 60px !important;
-    }
-}
-
-@media only screen and (max-width: 470px) {
-    .right-list .ico-btn {
-        display: none;
-    }
-    .ds>.ico-btn {
-        display: block !important;
-    }
-    #btn-sec button[type="button"] {
-        width: 110px !important;
-    }
-    body {
-        overflow-x: hidden !important;
-    }
-}
-
-@media only screen and (max-width: 420px) {
-    .horz-bar {
-        padding: 5px 10px !important;
-    }
-}
-
-@media only screen and (max-width: 1025px) {
-    .middle-sec>ul>li {
-        margin-left: 0px !important;
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    .seeker-container {
-        width: 80% !important;
-    }
-    .time-left {
-        margin-left: -5px !important;
-    }
-    .time-right {
-        margin-right: -6px !important;
-    }
-    .left-sec {
-        width: 25% !important;
-        padding-left: 5px !important;
-    }
-    .music-nm {
-        width: 50% !important;
-    }
-    .middle-sec {
-        width: 40% !important;
-    }
-    .cross {
-        left: 95% !important;
-    }
-    .right-sec {
-        width: 25% !important;
-        margin-right: 15px;
-        padding-left: 0px;
-        right: 5px;
-    }
-    .volm-container {
-        margin-left: 5px !important;
-    }
-    .left-sec>.list-cnt>li>button {
-        display: none !important;
-    }
-    .volm-ico {
-        display: block !important;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .right-sec {
-        top: 10px;
-        right: 0px !important;
-    }
-}
-
-@media only screen and (max-width: 650px) {
     .music-nm {
         display: block !important;
     }
@@ -1998,6 +1863,75 @@ input:focus, select:focus, textarea:focus, button:focus {
     }
     .middle-sec>ul>li {
         padding-right: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 601px) {
+    .spinner {
+        top: 43.5% !important;
+        left: 43.5% !important;
+        width: 55px !important;
+        height: 55px !important
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    #btn-sec .no-display {
+        display: none !important;
+    }
+    #btn-sec button[type="button"] {
+        width: 110px !important;
+        padding: 0.5em 0.5em 0.68em !important;
+    }
+    #btn-sec button[type="submit"] {
+        width: 40px !important;
+        padding: 0.5em 0.6em 0.68em !important;
+        padding-left: 0.84em !important;
+    }
+    .subscribe-s {
+        display: block !important;
+    }
+    #followers {
+        bottom: 13px !important;
+        font-size: 12px !important;
+        left: 150% !important;
+    }
+}
+
+@media only screen and (max-width: 501px) {
+    .gradient-container {
+        top: -25px !important;
+    }
+    .artist-details-container {
+        top: 60px !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .right-sec {
+        top: 10px;
+        right: 0px !important;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .right-list .ico-btn {
+        display: none;
+    }
+    .ds>.ico-btn {
+        display: block !important;
+    }
+    #btn-sec button[type="button"] {
+        width: 110px !important;
+    }
+    body {
+        overflow-x: hidden !important;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .horz-bar {
+        padding: 5px 10px !important;
     }
 }
 
