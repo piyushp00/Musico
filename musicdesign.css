@@ -36,6 +36,7 @@ Author: PiyushPandey
 25.Small Buttons CSS
 26.KEYFRAME ANIMATIONS CSS
 27.Media Queries
+28.Bottom Information CSS
 
 -------------------------------------------------------------------*/
 
@@ -2233,6 +2234,29 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .right-sec-br:hover .list-cnt-br {
     display: block;
+}
+
+/* =====Bottom Information CSS===== */
+#bottom{
+    width: 30%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+}
+
+.bottom-ctn{
+    margin: 5px;
+    padding: 5px;
+    
+}
+
+.bottom-ctn p{
+    font-size: 9px;
+    font-family: sans-serif;
+    white-space: nowrap;
 }
 
 /* ====Small Buttons CSS==== */
