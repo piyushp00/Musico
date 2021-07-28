@@ -1261,6 +1261,7 @@ input:focus, select:focus, textarea:focus, button:focus {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
+    width: 100%
 }
 
 .pride-img img {
